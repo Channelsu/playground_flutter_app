@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:playgroundflutterapp/model/hotel_list_data.dart';
 
 class HotelsScreen extends StatelessWidget {
   const HotelsScreen({Key? key}) : super(key: key);
