@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Playground For Flutter'),
+      home: const MyHomePage(title: 'おすすめの旅館'),
     );
   }
 }
@@ -33,7 +33,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _selectedBottomNavigationBarIndex = 0;
+  int _selectedBottomNavigationBarIndex = 1;
 
   static const _screens = [
     HomeScreen(),
