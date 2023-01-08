@@ -3,6 +3,7 @@ import 'package:playgroundflutterapp/screens/home_screen.dart';
 import 'package:playgroundflutterapp/screens/hotels_screen.dart';
 import 'package:playgroundflutterapp/screens/playground_screen.dart';
 import 'package:playgroundflutterapp/screens/settings_screen.dart';
+import 'package:playgroundflutterapp/screens/widgets_collection_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
     HomeScreen(),
     HotelsScreen(),
     PlaygroundScreen(),
+    WidgetsCollectionScreen(),
     SettingsScreen(),
   ];
 
@@ -64,6 +66,8 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(icon: Icon(Icons.hotel_rounded), label: '旅館'),
           BottomNavigationBarItem(
               icon: Icon(Icons.play_circle), label: ' playground'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.widgets_sharp), label: 'Widgets'),
           BottomNavigationBarItem(icon: Icon(Icons.settings), label: '設定'),
         ],
         type: BottomNavigationBarType.fixed,
