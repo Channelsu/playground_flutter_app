@@ -5,8 +5,12 @@ class PlaygroundScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text('プレイグラウンド', style: TextStyle(fontSize: 32.0))),
+    return Scaffold(
+      body: Column(
+        // 上下（Rowの場合は左右）中央に寄せる
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [Text('abc')],
+      ),
     );
   }
 }
