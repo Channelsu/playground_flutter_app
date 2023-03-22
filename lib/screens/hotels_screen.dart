@@ -76,13 +76,6 @@ class HotelsScreen extends StatelessWidget {
                 child: Container(
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                    // boxShadow: <BoxShadow>[
-                    //   BoxShadow(
-                    //     color: Colors.grey.withOpacity(0.6),
-                    //     offset: const Offset(4, 4),
-                    //     blurRadius: 16,
-                    //   ),
-                    // ],
                   ),
                   child: ClipRRect(
                     borderRadius: const BorderRadius.all(Radius.circular(16.0)),
@@ -122,34 +115,9 @@ class HotelsScreen extends StatelessWidget {
                                           ),
                                           Row(
                                             children: const <Widget>[
-                                              // Text(
-                                              //   '谷の集落に滞在する',
-                                              //   style: TextStyle(
-                                              //       fontSize: 14,
-                                              //       color: Colors.grey
-                                              //           .withOpacity(0.8)),
-                                              // ),
                                               SizedBox(
                                                 width: 4,
                                               ),
-                                              // Icon(
-                                              //   FontAwesomeIcons.locationDot,
-                                              //   size: 12,
-                                              //   color: HotelAppTheme
-                                              //           .buildLightTheme()
-                                              //       .primaryColor,
-                                              // ),
-                                              // Expanded(
-                                              //   child: Text(
-                                              //     ' km to city',
-                                              //     overflow:
-                                              //         TextOverflow.ellipsis,
-                                              //     style: TextStyle(
-                                              //         fontSize: 14,
-                                              //         color: Colors.grey
-                                              //             .withOpacity(0.8)),
-                                              //   ),
-                                              // ),
                                             ],
                                           ),
                                         ],
@@ -243,13 +211,6 @@ class HotelsScreen extends StatelessWidget {
                 child: Container(
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                    // boxShadow: <BoxShadow>[
-                    //   BoxShadow(
-                    //     color: Colors.grey.withOpacity(0.6),
-                    //     offset: const Offset(4, 4),
-                    //     blurRadius: 16,
-                    //   ),
-                    // ],
                   ),
                   child: ClipRRect(
                     borderRadius: const BorderRadius.all(Radius.circular(16.0)),
@@ -289,34 +250,9 @@ class HotelsScreen extends StatelessWidget {
                                           ),
                                           Row(
                                             children: const <Widget>[
-                                              // Text(
-                                              //   '谷の集落に滞在する',
-                                              //   style: TextStyle(
-                                              //       fontSize: 14,
-                                              //       color: Colors.grey
-                                              //           .withOpacity(0.8)),
-                                              // ),
                                               SizedBox(
                                                 width: 4,
                                               ),
-                                              // Icon(
-                                              //   FontAwesomeIcons.locationDot,
-                                              //   size: 12,
-                                              //   color: HotelAppTheme
-                                              //           .buildLightTheme()
-                                              //       .primaryColor,
-                                              // ),
-                                              // Expanded(
-                                              //   child: Text(
-                                              //     ' km to city',
-                                              //     overflow:
-                                              //         TextOverflow.ellipsis,
-                                              //     style: TextStyle(
-                                              //         fontSize: 14,
-                                              //         color: Colors.grey
-                                              //             .withOpacity(0.8)),
-                                              //   ),
-                                              // ),
                                             ],
                                           ),
                                         ],
@@ -410,13 +346,6 @@ class HotelsScreen extends StatelessWidget {
                 child: Container(
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                    // boxShadow: <BoxShadow>[
-                    //   BoxShadow(
-                    //     color: Colors.grey.withOpacity(0.6),
-                    //     offset: const Offset(4, 4),
-                    //     blurRadius: 16,
-                    //   ),
-                    // ],
                   ),
                   child: ClipRRect(
                     borderRadius: const BorderRadius.all(Radius.circular(16.0)),
@@ -456,34 +385,9 @@ class HotelsScreen extends StatelessWidget {
                                           ),
                                           Row(
                                             children: const <Widget>[
-                                              // Text(
-                                              //   '谷の集落に滞在する',
-                                              //   style: TextStyle(
-                                              //       fontSize: 14,
-                                              //       color: Colors.grey
-                                              //           .withOpacity(0.8)),
-                                              // ),
                                               SizedBox(
                                                 width: 4,
                                               ),
-                                              // Icon(
-                                              //   FontAwesomeIcons.locationDot,
-                                              //   size: 12,
-                                              //   color: HotelAppTheme
-                                              //           .buildLightTheme()
-                                              //       .primaryColor,
-                                              // ),
-                                              // Expanded(
-                                              //   child: Text(
-                                              //     ' km to city',
-                                              //     overflow:
-                                              //         TextOverflow.ellipsis,
-                                              //     style: TextStyle(
-                                              //         fontSize: 14,
-                                              //         color: Colors.grey
-                                              //             .withOpacity(0.8)),
-                                              //   ),
-                                              // ),
                                             ],
                                           ),
                                         ],
@@ -577,13 +481,6 @@ class HotelsScreen extends StatelessWidget {
                 child: Container(
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                    // boxShadow: <BoxShadow>[
-                    //   BoxShadow(
-                    //     color: Colors.grey.withOpacity(0.6),
-                    //     offset: const Offset(4, 4),
-                    //     blurRadius: 16,
-                    //   ),
-                    // ],
                   ),
                   child: ClipRRect(
                     borderRadius: const BorderRadius.all(Radius.circular(16.0)),
@@ -623,34 +520,9 @@ class HotelsScreen extends StatelessWidget {
                                           ),
                                           Row(
                                             children: const <Widget>[
-                                              // Text(
-                                              //   '谷の集落に滞在する',
-                                              //   style: TextStyle(
-                                              //       fontSize: 14,
-                                              //       color: Colors.grey
-                                              //           .withOpacity(0.8)),
-                                              // ),
                                               SizedBox(
                                                 width: 4,
                                               ),
-                                              // Icon(
-                                              //   FontAwesomeIcons.locationDot,
-                                              //   size: 12,
-                                              //   color: HotelAppTheme
-                                              //           .buildLightTheme()
-                                              //       .primaryColor,
-                                              // ),
-                                              // Expanded(
-                                              //   child: Text(
-                                              //     ' km to city',
-                                              //     overflow:
-                                              //         TextOverflow.ellipsis,
-                                              //     style: TextStyle(
-                                              //         fontSize: 14,
-                                              //         color: Colors.grey
-                                              //             .withOpacity(0.8)),
-                                              //   ),
-                                              // ),
                                             ],
                                           ),
                                         ],
@@ -744,13 +616,6 @@ class HotelsScreen extends StatelessWidget {
                 child: Container(
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                    // boxShadow: <BoxShadow>[
-                    //   BoxShadow(
-                    //     color: Colors.grey.withOpacity(0.6),
-                    //     offset: const Offset(4, 4),
-                    //     blurRadius: 16,
-                    //   ),
-                    // ],
                   ),
                   child: ClipRRect(
                     borderRadius: const BorderRadius.all(Radius.circular(16.0)),
@@ -790,34 +655,9 @@ class HotelsScreen extends StatelessWidget {
                                           ),
                                           Row(
                                             children: const <Widget>[
-                                              // Text(
-                                              //   '谷の集落に滞在する',
-                                              //   style: TextStyle(
-                                              //       fontSize: 14,
-                                              //       color: Colors.grey
-                                              //           .withOpacity(0.8)),
-                                              // ),
                                               SizedBox(
                                                 width: 4,
                                               ),
-                                              // Icon(
-                                              //   FontAwesomeIcons.locationDot,
-                                              //   size: 12,
-                                              //   color: HotelAppTheme
-                                              //           .buildLightTheme()
-                                              //       .primaryColor,
-                                              // ),
-                                              // Expanded(
-                                              //   child: Text(
-                                              //     ' km to city',
-                                              //     overflow:
-                                              //         TextOverflow.ellipsis,
-                                              //     style: TextStyle(
-                                              //         fontSize: 14,
-                                              //         color: Colors.grey
-                                              //             .withOpacity(0.8)),
-                                              //   ),
-                                              // ),
                                             ],
                                           ),
                                         ],
