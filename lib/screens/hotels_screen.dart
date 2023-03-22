@@ -83,58 +83,22 @@ class HotelsScreen extends StatelessWidget {
                       children: <Widget>[
                         Column(
                           children: <Widget>[
-                            Container(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Expanded(
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 16, top: 8, bottom: 8),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          const Text(
-                                            '星のや軽井沢',
-                                            textAlign: TextAlign.left,
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 22,
-                                            ),
-                                          ),
-                                          Text(
-                                            '長野県・軽井沢',
-                                            style: TextStyle(
-                                                fontSize: 14,
-                                                color: Colors.grey
-                                                    .withOpacity(0.8)),
-                                          ),
-                                          Row(
-                                            children: const <Widget>[
-                                              SizedBox(
-                                                width: 4,
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Expanded(
+                                  child: Padding(
                                     padding: const EdgeInsets.only(
-                                        right: 16, top: 8),
+                                        left: 16, top: 8, bottom: 8),
                                     child: Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.end,
+                                          CrossAxisAlignment.start,
                                       children: <Widget>[
                                         const Text(
-                                          '\¥38,115〜',
+                                          '星のや軽井沢',
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,
@@ -142,17 +106,49 @@ class HotelsScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Text(
-                                          '谷の集落に滞在する',
+                                          '長野県・軽井沢',
                                           style: TextStyle(
                                               fontSize: 14,
                                               color:
                                                   Colors.grey.withOpacity(0.8)),
                                         ),
+                                        Row(
+                                          children: const <Widget>[
+                                            SizedBox(
+                                              width: 4,
+                                            ),
+                                          ],
+                                        ),
                                       ],
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(right: 16, top: 8),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: <Widget>[
+                                      const Text(
+                                        '\¥38,115〜',
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 22,
+                                        ),
+                                      ),
+                                      Text(
+                                        '谷の集落に滞在する',
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            color:
+                                                Colors.grey.withOpacity(0.8)),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
@@ -218,58 +214,22 @@ class HotelsScreen extends StatelessWidget {
                       children: <Widget>[
                         Column(
                           children: <Widget>[
-                            Container(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Expanded(
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 16, top: 8, bottom: 8),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          const Text(
-                                            '界 加賀',
-                                            textAlign: TextAlign.left,
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 22,
-                                            ),
-                                          ),
-                                          Text(
-                                            '石川県・山代温泉',
-                                            style: TextStyle(
-                                                fontSize: 14,
-                                                color: Colors.grey
-                                                    .withOpacity(0.8)),
-                                          ),
-                                          Row(
-                                            children: const <Widget>[
-                                              SizedBox(
-                                                width: 4,
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Expanded(
+                                  child: Padding(
                                     padding: const EdgeInsets.only(
-                                        right: 16, top: 8),
+                                        left: 16, top: 8, bottom: 8),
                                     child: Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.end,
+                                          CrossAxisAlignment.start,
                                       children: <Widget>[
                                         const Text(
-                                          '\¥16,000〜',
+                                          '界 加賀',
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,
@@ -277,17 +237,49 @@ class HotelsScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Text(
-                                          '加賀伝統の温泉宿',
+                                          '石川県・山代温泉',
                                           style: TextStyle(
                                               fontSize: 14,
                                               color:
                                                   Colors.grey.withOpacity(0.8)),
                                         ),
+                                        Row(
+                                          children: const <Widget>[
+                                            SizedBox(
+                                              width: 4,
+                                            ),
+                                          ],
+                                        ),
                                       ],
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(right: 16, top: 8),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: <Widget>[
+                                      const Text(
+                                        '\¥16,000〜',
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 22,
+                                        ),
+                                      ),
+                                      Text(
+                                        '加賀伝統の温泉宿',
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            color:
+                                                Colors.grey.withOpacity(0.8)),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
@@ -353,58 +345,22 @@ class HotelsScreen extends StatelessWidget {
                       children: <Widget>[
                         Column(
                           children: <Widget>[
-                            Container(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Expanded(
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 16, top: 8, bottom: 8),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          const Text(
-                                            'OMO7大阪',
-                                            textAlign: TextAlign.left,
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 22,
-                                            ),
-                                          ),
-                                          Text(
-                                            '大阪府・大阪市',
-                                            style: TextStyle(
-                                                fontSize: 14,
-                                                color: Colors.grey
-                                                    .withOpacity(0.8)),
-                                          ),
-                                          Row(
-                                            children: const <Widget>[
-                                              SizedBox(
-                                                width: 4,
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Expanded(
+                                  child: Padding(
                                     padding: const EdgeInsets.only(
-                                        right: 16, top: 8),
+                                        left: 16, top: 8, bottom: 8),
                                     child: Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.end,
+                                          CrossAxisAlignment.start,
                                       children: <Widget>[
                                         const Text(
-                                          '\¥12,000〜',
+                                          'OMO7大阪',
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,
@@ -412,17 +368,49 @@ class HotelsScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Text(
-                                          'ほれてまうわ、なにわ',
+                                          '大阪府・大阪市',
                                           style: TextStyle(
                                               fontSize: 14,
                                               color:
                                                   Colors.grey.withOpacity(0.8)),
                                         ),
+                                        Row(
+                                          children: const <Widget>[
+                                            SizedBox(
+                                              width: 4,
+                                            ),
+                                          ],
+                                        ),
                                       ],
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(right: 16, top: 8),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: <Widget>[
+                                      const Text(
+                                        '\¥12,000〜',
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 22,
+                                        ),
+                                      ),
+                                      Text(
+                                        'ほれてまうわ、なにわ',
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            color:
+                                                Colors.grey.withOpacity(0.8)),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
@@ -488,58 +476,22 @@ class HotelsScreen extends StatelessWidget {
                       children: <Widget>[
                         Column(
                           children: <Widget>[
-                            Container(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Expanded(
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 16, top: 8, bottom: 8),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          const Text(
-                                            'BEB5軽井沢',
-                                            textAlign: TextAlign.left,
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 22,
-                                            ),
-                                          ),
-                                          Text(
-                                            '長野県・軽井沢',
-                                            style: TextStyle(
-                                                fontSize: 14,
-                                                color: Colors.grey
-                                                    .withOpacity(0.8)),
-                                          ),
-                                          Row(
-                                            children: const <Widget>[
-                                              SizedBox(
-                                                width: 4,
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Expanded(
+                                  child: Padding(
                                     padding: const EdgeInsets.only(
-                                        right: 16, top: 8),
+                                        left: 16, top: 8, bottom: 8),
                                     child: Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.end,
+                                          CrossAxisAlignment.start,
                                       children: <Widget>[
                                         const Text(
-                                          '\¥7,433〜',
+                                          'BEB5軽井沢',
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,
@@ -547,17 +499,49 @@ class HotelsScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Text(
-                                          '時間を気にせずルーズに',
+                                          '長野県・軽井沢',
                                           style: TextStyle(
                                               fontSize: 14,
                                               color:
                                                   Colors.grey.withOpacity(0.8)),
                                         ),
+                                        Row(
+                                          children: const <Widget>[
+                                            SizedBox(
+                                              width: 4,
+                                            ),
+                                          ],
+                                        ),
                                       ],
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(right: 16, top: 8),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: <Widget>[
+                                      const Text(
+                                        '\¥7,433〜',
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 22,
+                                        ),
+                                      ),
+                                      Text(
+                                        '時間を気にせずルーズに',
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            color:
+                                                Colors.grey.withOpacity(0.8)),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
@@ -623,58 +607,22 @@ class HotelsScreen extends StatelessWidget {
                       children: <Widget>[
                         Column(
                           children: <Widget>[
-                            Container(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Expanded(
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 16, top: 8, bottom: 8),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          const Text(
-                                            '青森屋',
-                                            textAlign: TextAlign.left,
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 22,
-                                            ),
-                                          ),
-                                          Text(
-                                            '青森県・三沢',
-                                            style: TextStyle(
-                                                fontSize: 14,
-                                                color: Colors.grey
-                                                    .withOpacity(0.8)),
-                                          ),
-                                          Row(
-                                            children: const <Widget>[
-                                              SizedBox(
-                                                width: 4,
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Expanded(
+                                  child: Padding(
                                     padding: const EdgeInsets.only(
-                                        right: 16, top: 8),
+                                        left: 16, top: 8, bottom: 8),
                                     child: Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.end,
+                                          CrossAxisAlignment.start,
                                       children: <Widget>[
                                         const Text(
-                                          '\¥8,195〜',
+                                          '青森屋',
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,
@@ -682,17 +630,49 @@ class HotelsScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Text(
-                                          'ハネトが舞い、祭り気分最高',
+                                          '青森県・三沢',
                                           style: TextStyle(
                                               fontSize: 14,
                                               color:
                                                   Colors.grey.withOpacity(0.8)),
                                         ),
+                                        Row(
+                                          children: const <Widget>[
+                                            SizedBox(
+                                              width: 4,
+                                            ),
+                                          ],
+                                        ),
                                       ],
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(right: 16, top: 8),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: <Widget>[
+                                      const Text(
+                                        '\¥8,195〜',
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 22,
+                                        ),
+                                      ),
+                                      Text(
+                                        'ハネトが舞い、祭り気分最高',
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            color:
+                                                Colors.grey.withOpacity(0.8)),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
