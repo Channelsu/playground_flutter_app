@@ -8,6 +8,7 @@ Widget hotelCard({
   required String tagline,
 }) =>
     Card(
+      margin: const EdgeInsets.all(12),
       clipBehavior: Clip.antiAlias,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(24),
