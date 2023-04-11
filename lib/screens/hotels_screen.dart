@@ -13,7 +13,7 @@ class HotelsScreen extends StatelessWidget {
         itemCount: hotelList.length,
         itemBuilder: ((context, index) {
           final hotel = hotelList[index];
-          return hotelCard(
+          return HotelCard(
             imageLink: hotel.imageLink,
             hotelName: hotel.name,
             place: hotel.place,
