@@ -7,6 +7,7 @@ class HotelCard extends StatelessWidget {
   String place;
   String price;
   String tagline;
+  void Function()? onTap;
   HotelCard({
     super.key,
     required this.imageLink,
@@ -14,20 +15,13 @@ class HotelCard extends StatelessWidget {
     required this.place,
     required this.price,
     required this.tagline,
+    required this.onTap,
   });
-
-  // goToHotelDetailScreenメソッド作成する
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) {
-            return const HotelDetailScreen();
-          },
-        ),
-      ),
+      onTap: onTap,
       child: Card(
         margin: const EdgeInsets.all(12),
         clipBehavior: Clip.antiAlias,
