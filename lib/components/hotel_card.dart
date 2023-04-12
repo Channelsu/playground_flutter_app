@@ -28,6 +28,7 @@ class HotelCard extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
+        // 画像部分とテキスト部分の2つ
         child: Column(
           children: [
             Stack(
@@ -61,60 +62,31 @@ class HotelCard extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(16).copyWith(bottom: 0),
-              child: GestureDetector(
-                onTap: null,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                  ),
-                  child: ClipRRect(
-                    borderRadius: const BorderRadius.all(Radius.circular(16.0)),
-                    child: Stack(
-                      children: <Widget>[
-                        Column(
-                          children: <Widget>[
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Expanded(
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 16, top: 8, bottom: 8),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Text(
-                                          hotelName,
-                                          textAlign: TextAlign.left,
-                                          style: const TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 22,
-                                          ),
-                                        ),
-                                        Text(
-                                          place,
-                                          style: TextStyle(
-                                            fontSize: 14,
-                                            color: Colors.grey.withOpacity(0.8),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.only(right: 16, top: 8),
+              child: Container(
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                ),
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.all(Radius.circular(16.0)),
+                  child: Stack(
+                    children: <Widget>[
+                      Column(
+                        children: <Widget>[
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 16, top: 8, bottom: 8),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
-                                        '¥$price〜',
+                                        hotelName,
                                         textAlign: TextAlign.left,
                                         style: const TextStyle(
                                           fontWeight: FontWeight.w600,
@@ -122,21 +94,45 @@ class HotelCard extends StatelessWidget {
                                         ),
                                       ),
                                       Text(
-                                        tagline,
+                                        place,
                                         style: TextStyle(
-                                            fontSize: 14,
-                                            color:
-                                                Colors.grey.withOpacity(0.8)),
+                                          fontSize: 14,
+                                          color: Colors.grey.withOpacity(0.8),
+                                        ),
                                       ),
                                     ],
                                   ),
                                 ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(right: 16, top: 8),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: <Widget>[
+                                    Text(
+                                      '¥$price〜',
+                                      textAlign: TextAlign.left,
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 22,
+                                      ),
+                                    ),
+                                    Text(
+                                      tagline,
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.grey.withOpacity(0.8)),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ),
