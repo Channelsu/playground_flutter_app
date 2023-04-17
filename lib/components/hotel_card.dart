@@ -1,27 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:playgroundflutterapp/model/hotel.dart';
 import 'package:playgroundflutterapp/screens/hotel_detail_screen.dart';
 
 class HotelCard extends StatelessWidget {
-  String imageLink;
-  String hotelName;
-  String place;
-  String price;
-  String tagline;
-  void Function()? onTap;
+  Hotel hotel;
   HotelCard({
     super.key,
-    required this.imageLink,
-    required this.hotelName,
-    required this.place,
-    required this.price,
-    required this.tagline,
-    required this.onTap,
+    required this.hotel,
   });
+
+  // ホテル詳細画面への遷移メソッド
+  void goToHotelDetailScreen(BuildContext context, Hotel hotel) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: ((context) => HotelDetailScreen(hotel: hotel)),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: () => goToHotelDetailScreen(context, hotel),
       child: Card(
         margin: const EdgeInsets.all(12),
         clipBehavior: Clip.antiAlias,
@@ -34,7 +35,7 @@ class HotelCard extends StatelessWidget {
             Stack(
               children: [
                 Ink.image(
-                  image: NetworkImage(imageLink),
+                  image: NetworkImage(hotel.imageLink),
                   height: 240,
                   fit: BoxFit.cover,
                 ),
@@ -75,7 +76,7 @@ class HotelCard extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
-                            hotelName,
+                            hotel.name,
                             textAlign: TextAlign.left,
                             style: const TextStyle(
                               fontWeight: FontWeight.w600,
@@ -83,7 +84,7 @@ class HotelCard extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            place,
+                            hotel.place,
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.grey.withOpacity(0.8),
@@ -100,7 +101,7 @@ class HotelCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: <Widget>[
                         Text(
-                          '¥$price〜',
+                          '¥${hotel.price}〜',
                           textAlign: TextAlign.left,
                           style: const TextStyle(
                             fontWeight: FontWeight.w600,
@@ -108,7 +109,7 @@ class HotelCard extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          tagline,
+                          hotel.tagline,
                           style: TextStyle(
                               fontSize: 14,
                               color: Colors.grey.withOpacity(0.8)),
