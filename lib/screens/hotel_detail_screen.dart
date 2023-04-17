@@ -19,7 +19,6 @@ class HotelDetailScreen extends StatelessWidget {
       body: Hero(
         tag: hotel.name,
         child: Material(
-          color: Colors.red,
           child: Ink.image(
             image: NetworkImage(hotel.imageLink),
             height: 240,
