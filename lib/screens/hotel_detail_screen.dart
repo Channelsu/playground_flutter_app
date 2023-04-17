@@ -16,10 +16,16 @@ class HotelDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(hotel.name),
       ),
-      body: Ink.image(
-        image: NetworkImage(hotel.imageLink),
-        height: 240,
-        fit: BoxFit.cover,
+      body: Hero(
+        tag: hotel.name,
+        child: Material(
+          color: Colors.red,
+          child: Ink.image(
+            image: NetworkImage(hotel.imageLink),
+            height: 240,
+            fit: BoxFit.cover,
+          ),
+        ),
       ),
     );
   }
