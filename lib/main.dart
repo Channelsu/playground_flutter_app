@@ -47,6 +47,15 @@ class _MyHomePageState extends State<MyHomePage> {
     SettingsScreen(),
   ];
 
+  static const List<BottomNavigationBarItem> _bottomNavigationBarItems = [
+    BottomNavigationBarItem(icon: Icon(Icons.home), label: 'ホーム'),
+    BottomNavigationBarItem(icon: Icon(Icons.hotel_rounded), label: '旅館'),
+    BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'カート'),
+    BottomNavigationBarItem(icon: Icon(Icons.play_circle), label: ' プレグラ'),
+    BottomNavigationBarItem(icon: Icon(Icons.widgets_sharp), label: 'Widgets'),
+    BottomNavigationBarItem(icon: Icon(Icons.settings), label: '設定'),
+  ];
+
   void _onBottomNavigationBarItemTapped(int index) {
     setState(() {
       _selectedBottomNavigationBarIndex = index;
@@ -63,17 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedBottomNavigationBarIndex,
         onTap: _onBottomNavigationBarItemTapped,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'ホーム'),
-          BottomNavigationBarItem(icon: Icon(Icons.hotel_rounded), label: '旅館'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart), label: 'カート'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.play_circle), label: ' playground'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.widgets_sharp), label: 'Widgets'),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: '設定'),
-        ],
+        items: _bottomNavigationBarItems,
         type: BottomNavigationBarType.fixed,
       ),
     );
