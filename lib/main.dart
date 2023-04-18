@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:playgroundflutterapp/screens/cart_screen.dart';
 import 'package:playgroundflutterapp/screens/home_screen.dart';
 import 'package:playgroundflutterapp/screens/hotels_screen.dart';
 import 'package:playgroundflutterapp/screens/playground_screen.dart';
@@ -40,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
   static const _screens = [
     HomeScreen(),
     HotelsScreen(),
+    CartScreen(),
     PlaygroundScreen(),
     WidgetsCollectionScreen(),
     SettingsScreen(),
@@ -64,6 +66,8 @@ class _MyHomePageState extends State<MyHomePage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'ホーム'),
           BottomNavigationBarItem(icon: Icon(Icons.hotel_rounded), label: '旅館'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart), label: 'カート'),
           BottomNavigationBarItem(
               icon: Icon(Icons.play_circle), label: ' playground'),
           BottomNavigationBarItem(
