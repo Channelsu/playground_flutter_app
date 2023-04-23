@@ -6,6 +6,7 @@ class Hotel {
   final String price;
   final String tagline;
   final String imageLink;
+  final String introduce;
 
   Hotel({
     required this.id,
@@ -15,5 +16,6 @@ class Hotel {
     required this.price,
     required this.tagline,
     required this.imageLink,
+    required this.introduce,
   });
 }
