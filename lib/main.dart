@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:playgroundflutterapp/constants/colors.dart';
 import 'package:playgroundflutterapp/screens/cart_screen.dart';
 import 'package:playgroundflutterapp/screens/home_screen.dart';
 import 'package:playgroundflutterapp/screens/hotels_screen.dart';
@@ -19,17 +20,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: customSwatch,
       ),
-      home: const MyHomePage(title: 'おすすめの旅館'),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -66,7 +65,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        centerTitle: true,
+        title: Image.asset(
+          'assets/app_logo.png',
+          height: 120,
+          width: 120,
+        ),
       ),
       body: _screens[_selectedBottomNavigationBarIndex],
       bottomNavigationBar: BottomNavigationBar(
