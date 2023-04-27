@@ -74,6 +74,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: _screens[_selectedBottomNavigationBarIndex],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Theme.of(context).primaryColor,
+        selectedItemColor: Colors.orange,
+        unselectedItemColor: Colors.white,
         currentIndex: _selectedBottomNavigationBarIndex,
         onTap: _onBottomNavigationBarItemTapped,
         items: _bottomNavigationBarItems,
