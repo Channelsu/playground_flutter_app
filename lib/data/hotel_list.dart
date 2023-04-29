@@ -22,6 +22,8 @@ List<Hotel> hotelList = [
     tagline: '世界都市東京によみがえる',
     imageLink:
         'https://www.hoshinoresorts.com/hrcms/wp-content/images/2013/10/fg2205_Thoshi_02_01-31.jpg',
+    introduce:
+        '東京・大手町。皇居や東京駅にほど近い一角にある日本旅館。お茶の間を中心に設えた小さな宿が塔状に重なり合っている。江戸小紋で包まれた外観はまるで結界を張っているようだ。一枚板の扉を抜けると、香やい草の匂いに包まれる。玄関で履物を預ければ、日本旅館らしいもてなしと安らぎはそのままに、進化した新しい宿での滞在がはじまる。',
   ),
   Hotel(
     id: 3,
@@ -32,6 +34,8 @@ List<Hotel> hotelList = [
     tagline: '明日が分からない、丘陵',
     imageLink:
         'https://www.hoshinoresorts.com/hrcms/wp-content/images/2018/03/9f998229562dbe1d89aae81e37ec8fa5.jpg',
+    introduce:
+        '河口湖を見晴らす山の斜面で、心赴くままに外遊びを満喫することができる。グランピングという遊びは、些細な自然の変化に気づかせてくれる。火を囲み、森の気配を聞く。体が少しずつ動物としての本能を目覚めさせていく。',
   ),
   Hotel(
     id: 1001,
@@ -54,6 +58,8 @@ List<Hotel> hotelList = [
     tagline: '四季折々の棚田',
     imageLink:
         'https://www.hoshinoresorts.com/hrcms/wp-content/images/2022/04/main_yufuin_2880-1822.jpg',
+    introduce:
+        '由布岳に見守られるように建つ宿は、日本の原風景とも称される棚田をランドスケープとして望みます。稲作の暦を追う風景は四季を映し、心身が緩む滞在となります。',
   ),
   Hotel(
     id: 1003,
@@ -64,6 +70,8 @@ List<Hotel> hotelList = [
     tagline: '内なる表現欲と出会う',
     imageLink:
         'https://www.hoshinoresorts.com/hrcms/wp-content/images/2018/04/8b9f019c86281543243551f33dffb9aa.jpg',
+    introduce:
+        '雄大な自然を望む客室は、全室露天風呂付き。館内を創り上げるアート作品との出会いが内なる表現欲をかき立てます。アート心を持つ仙石原ならではの滞在です。',
   ),
   Hotel(
     id: 2001,
@@ -86,6 +94,8 @@ List<Hotel> hotelList = [
     tagline: '歴史と活気を感じる街',
     imageLink:
         'https://www.hoshinoresorts.com/hrcms/wp-content/images/2022/10/b5a24819a2134859ce56ef27cf846ae4.jpg',
+    introduce:
+        'ホテルのそばから路面電車に乗って、高知の街の旅をスタート！数多くの偉人を輩出したこの街は、歴史と活気が常にあふれています。日本最大級の青空市「日曜市」や地元の方や観光客でにぎわう「ひろめ市場」など、高知ならではの文化に触れる旅はいかがでしょう。',
   ),
   Hotel(
     id: 2003,
@@ -96,6 +106,8 @@ List<Hotel> hotelList = [
     tagline: 'ソーラン、目覚めの港町',
     imageLink:
         'https://www.hoshinoresorts.com/hrcms/wp-content/images/2021/10/OMOotaruKV_2880_1822.jpg',
+    introduce:
+        '文明開化の明治時代の面影が今も遺るレトロな港町、小樽。ニシン漁の勇ましい掛け声が聞こえてきそうな朝の町歩きは心地よい活気が漂います。モダンなダイニングでニシン料理のスペシャリテを味わえば、港町の景色が少し違って見えてくる。小樽に泊まる新たな旅のはじまりです。',
   ),
   Hotel(
     id: 3001,
@@ -118,6 +130,8 @@ List<Hotel> hotelList = [
     tagline: '自転車好きも嬉しい駅ウエ',
     imageLink:
         'https://www.hoshinoresorts.com/hrcms/wp-content/images/2019/10/Yikin-HYO-IZY_0346-top.jpg',
+    introduce:
+        '居酒屋以上、旅未満のルーズなホテルはみんな嬉しい駅ウエ😊インダストリアルなカフェラウンジは持ち込みOK👌で24時間オープンしているし、チェックアウトもお昼ごろ😴壁の大きなスクリーンには見たことのない自転車競技！🚴‍♀️🚴‍♂️💨大好きな自転車も一緒に泊まれるなんてヤバすぎ😆🎉💯',
   ),
   Hotel(
     id: 10001,
@@ -140,6 +154,8 @@ List<Hotel> hotelList = [
     tagline: '阿修羅の流れが躍動する',
     imageLink:
         'https://www.hoshinoresorts.com/hrcms/wp-content/images/2013/10/37f245062fa21a91ab58b0be400d9251.jpg',
+    introduce:
+        'ここは、奥入瀬渓流の畔に建つ唯一のリゾートホテル。十和田八幡平国立公園に属す奥入瀬渓流には、清流と苔むした岩、落葉広葉樹の森が広がります。瑞々しい新緑、錦秋の森、雪と氷の世界。その景観は、特別名勝、天然記念物にも指定されるほど。渓流とともに目覚める休日をお過ごしください。',
   ),
   Hotel(
     id: 10003,
@@ -150,5 +166,7 @@ List<Hotel> hotelList = [
     tagline: 'イリオモテヤマネコが棲む',
     imageLink:
         'https://www.hoshinoresorts.com/hrcms/wp-content/images/2019/08/e9a8e225bab88e46ac078ccd36ff818c.jpg',
+    introduce:
+        'ジャングルが90％を覆う奇跡の島。亜熱帯性気候が育む独自の生態系は、イリオモテヤマネコをはじめ、驚きと発見にあふれています。自然と共生し、希少な野生生物とともに暮らす島での体験は、旅に新たな豊かさをもたらします。',
   ),
 ];
