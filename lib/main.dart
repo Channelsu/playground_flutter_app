@@ -73,8 +73,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: _screens[_selectedBottomNavigationBarIndex],
+      // ボトムナビ透過のため記述
+      extendBody: true,
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Theme.of(context).primaryColor,
+        // backgroundColor: Theme.of(context).primaryColor,
+        // ボトムナビ透過
+        backgroundColor: Colors.transparent.withOpacity(0.5),
         selectedItemColor: Colors.orange,
         unselectedItemColor: Colors.white,
         currentIndex: _selectedBottomNavigationBarIndex,
