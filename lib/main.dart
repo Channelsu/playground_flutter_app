@@ -7,7 +7,15 @@ import 'package:playgroundflutterapp/screens/playground_screen.dart';
 import 'package:playgroundflutterapp/screens/settings_screen.dart';
 import 'package:playgroundflutterapp/screens/widgets_collection_screen.dart';
 
-void main() {
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MyApp());
 }
 
