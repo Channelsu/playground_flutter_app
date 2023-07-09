@@ -9,6 +9,8 @@ import 'package:playgroundflutterapp/screens/widgets_collection_screen.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+// ignore: unused_import
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
