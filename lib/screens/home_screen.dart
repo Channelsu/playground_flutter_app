@@ -9,8 +9,13 @@ class HomeScreen extends HookWidget {
     // 状態管理したい変数を定義
     final counter = useState(0);
 
-    return const Scaffold(
-      body: Center(child: Text('ホーム画面', style: TextStyle(fontSize: 32.0))),
+    return Scaffold(
+      body: Center(
+        child: Text(
+          counter.value.toString(),
+          style: const TextStyle(fontSize: 32.0),
+        ),
+      ),
     );
   }
 }
