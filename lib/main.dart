@@ -45,15 +45,15 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _selectedBottomNavigationBarIndex = 1;
+  int _selectedBottomNavigationBarIndex = 0;
 
-  static const _screens = [
-    HomeScreen(),
-    HotelsScreen(),
-    CartScreen(),
-    PlaygroundScreen(),
-    WidgetsCollectionScreen(),
-    SettingsScreen(),
+  static final _screens = [
+    const HomeScreen(),
+    const HotelsScreen(),
+    const CartScreen(),
+    const PlaygroundScreen(),
+    const WidgetsCollectionScreen(),
+    const SettingsScreen(),
   ];
 
   static const List<BottomNavigationBarItem> _bottomNavigationBarItems = [
