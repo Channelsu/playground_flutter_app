@@ -16,6 +16,13 @@ class HomeScreen extends HookWidget {
           style: const TextStyle(fontSize: 32.0),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          counter.value++;
+        },
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
