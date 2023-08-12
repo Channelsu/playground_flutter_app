@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:playgroundflutterapp/components/custom_app_bar.dart';
 
 class HomeScreen extends HookWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -10,6 +11,7 @@ class HomeScreen extends HookWidget {
     final counter = useState(0);
 
     return Scaffold(
+      appBar: const CustomAppBar(),
       body: Center(
         child: Text(
           counter.value.toString(),
