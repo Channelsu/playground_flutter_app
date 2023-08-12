@@ -6,6 +6,9 @@ class HomeScreen extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
+    // 状態管理したい変数を定義
+    final counter = useState(0);
+
     return const Scaffold(
       body: Center(child: Text('ホーム画面', style: TextStyle(fontSize: 32.0))),
     );
