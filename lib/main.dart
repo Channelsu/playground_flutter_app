@@ -45,7 +45,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _selectedBottomNavigationBarIndex = 0;
+  int _selectedBottomNavigationBarIndex = 4;
 
   static final _screens = [
     const HomeScreen(),
