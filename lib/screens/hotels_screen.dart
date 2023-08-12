@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:playgroundflutterapp/components/custom_app_bar.dart';
 import 'package:playgroundflutterapp/components/hotel_card.dart';
 import 'package:playgroundflutterapp/data/hotel_list.dart';
 
@@ -8,6 +9,7 @@ class HotelsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const CustomAppBar(),
       body: ListView.builder(
         padding: const EdgeInsets.all(8),
         itemCount: hotelList.length,
