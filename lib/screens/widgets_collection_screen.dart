@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:playgroundflutterapp/screens/basic_widgets_screen.dart';
 
 class WidgetsCollectionScreen extends StatefulWidget {
   const WidgetsCollectionScreen({Key? key}) : super(key: key);
@@ -41,7 +42,7 @@ class _WidgetsCollectionScreenState extends State<WidgetsCollectionScreen> {
         ),
         body: const TabBarView(
           children: [
-            Center(child: Text('基本', style: TextStyle(fontSize: 24))),
+            BasicWidgetsScreen(),
             Center(child: Text('レイアウト', style: TextStyle(fontSize: 24))),
             Center(child: Text('入力', style: TextStyle(fontSize: 24))),
             Center(child: Text('テキスト', style: TextStyle(fontSize: 24))),
