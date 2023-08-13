@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:playgroundflutterapp/constants/colors.dart';
 import 'package:playgroundflutterapp/screens/cart_screen.dart';
+import 'package:playgroundflutterapp/screens/english_words_screen.dart';
 import 'package:playgroundflutterapp/screens/home_screen.dart';
 import 'package:playgroundflutterapp/screens/hotels_screen.dart';
 import 'package:playgroundflutterapp/screens/playground_screen.dart';
@@ -53,6 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
     const CartScreen(),
     const PlaygroundScreen(),
     const WidgetsCollectionScreen(),
+    const EnglishWordsScreen(),
     const SettingsScreen(),
   ];
 
@@ -62,6 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
     BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'カート'),
     BottomNavigationBarItem(icon: Icon(Icons.play_circle), label: ' プレグラ'),
     BottomNavigationBarItem(icon: Icon(Icons.widgets_sharp), label: 'Widgets'),
+    BottomNavigationBarItem(icon: Icon(Icons.local_offer), label: '英単語'),
     BottomNavigationBarItem(icon: Icon(Icons.settings), label: '設定'),
   ];
 
