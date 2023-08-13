@@ -18,6 +18,11 @@ class EnglishWordsScreen extends StatelessWidget {
       ),
       body:
           const Center(child: Text('英単語帳画面', style: TextStyle(fontSize: 32.0))),
+      floatingActionButton: const FloatingActionButton(
+        onPressed: null,
+        tooltip: '新規追加',
+        child: Icon(Icons.add),
+      ),
     );
   }
 }
