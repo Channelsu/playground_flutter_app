@@ -26,17 +26,18 @@ class BasicWidgetsScreen extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     height: 128,
-                    child: Image.network(
-                      'https://source.unsplash.com/100x60/?shoe',
-                      fit: BoxFit.cover,
-                    ),
+                    child: Image.asset('assets/widget_images/app_bar.png'),
+                    // child: Image.network(
+                    //   'https://source.unsplash.com/100x60/?shoe',
+                    //   fit: BoxFit.cover,
+                    // ),
                   ),
                   // ウィジェット名
-                  Container(
+                  SizedBox(
                     width: double.infinity,
-                    padding: const EdgeInsets.only(left: 4),
                     child: Text(
                       'AppBar',
+                      textAlign: TextAlign.center,
                       overflow: TextOverflow.ellipsis,
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
