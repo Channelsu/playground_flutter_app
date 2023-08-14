@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
     const CartScreen(),
     const PlaygroundScreen(),
     const WidgetsCollectionScreen(),
-    const EnglishWordsScreen(),
+    EnglishWordsScreen(),
     const SettingsScreen(),
   ];
 
