@@ -50,9 +50,23 @@ class EnglishWordsScreen extends HookWidget {
                 service.create(document);
                 debugPrint(
                     '英単語：${englishWordController.text}　意味：${meaningController.text}');
+                Navigator.pop(context);
+                final simpleSnackBar = SnackBar(
+                  content: Text('${englishWordController.text}を追加しました'),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  behavior: SnackBarBehavior.floating,
+                  showCloseIcon: true,
+                  elevation: 4.0,
+                  backgroundColor: Colors.orangeAccent,
+                  closeIconColor: Colors.white,
+                  clipBehavior: Clip.hardEdge,
+                  dismissDirection: DismissDirection.horizontal,
+                );
+                ScaffoldMessenger.of(context).showSnackBar(simpleSnackBar);
                 englishWordController.clear();
                 meaningController.clear();
-                Navigator.pop(context);
               },
             ),
           ],
@@ -87,18 +101,6 @@ class EnglishWordsScreen extends HookWidget {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        // onPressed: () {
-        //   final service = EnglishWordsService();
-        //   final document = {
-        //     'title': englishWordController.text,
-        //     'japanese': meaningController.text,
-        //   };
-        //   service.create(document);
-        //   debugPrint(
-        //       '英単語：${englishWordController.text}　意味：${meaningController.text}');
-        //   englishWordController.clear();
-        //   meaningController.clear();
-        // },
         onPressed: () async => await _showFormDialog(
           context,
           englishWordController,
