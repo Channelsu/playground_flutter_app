@@ -101,7 +101,13 @@ class EnglishWordsScreen extends HookWidget {
             return ListView.builder(
               itemCount: englishWords.length,
               itemBuilder: (BuildContext context, int index) {
-                return ListTile(title: Text(englishWords[index]['title']));
+                return ListTile(
+                  title: Text(englishWords[index]['title']),
+                  trailing: const IconButton(
+                    icon: Icon(Icons.delete),
+                    onPressed: null,
+                  ),
+                );
               },
             );
           } else {
