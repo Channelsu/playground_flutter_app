@@ -42,12 +42,11 @@ class EnglishWordsScreen extends HookWidget {
             ElevatedButton(
               child: const Text("追加"),
               onPressed: () {
-                final service = EnglishWordsService();
                 final document = {
                   'title': englishWordController.text,
                   'japanese': meaningController.text,
                 };
-                service.create(document);
+                EnglishWordsService().create(document);
                 debugPrint(
                     '英単語：${englishWordController.text}　意味：${meaningController.text}');
                 Navigator.pop(context);
@@ -94,10 +93,23 @@ class EnglishWordsScreen extends HookWidget {
           ),
         ),
       ),
-      body: ListView.builder(
-        itemCount: items.length,
-        itemBuilder: (BuildContext context, int index) {
-          return ListTile(title: Text(items[index]));
+      body: StreamBuilder<List<Map<String, dynamic>>>(
+        stream: EnglishWordsService().getEnglishWords(),
+        builder: (BuildContext context,
+            AsyncSnapshot<List<Map<String, dynamic>>> snapshot) {
+          if (snapshot.hasError) {
+            return const Text('エラー');
+          } else if (snapshot.hasData) {
+            final englishWords = snapshot.data!;
+            return ListView.builder(
+              itemCount: englishWords.length,
+              itemBuilder: (BuildContext context, int index) {
+                return ListTile(title: Text(englishWords[index]['title']));
+              },
+            );
+          } else {
+            return const Center(child: CircularProgressIndicator());
+          }
         },
       ),
       floatingActionButton: FloatingActionButton(
