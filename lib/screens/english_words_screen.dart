@@ -5,21 +5,41 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 class EnglishWordsScreen extends HookWidget {
   const EnglishWordsScreen({super.key});
 
-  Future _showFormDialog(BuildContext context) {
+  Future _showFormDialog(
+    BuildContext context,
+    TextEditingController englishWordController,
+    TextEditingController meaningController,
+  ) {
     return showDialog(
       context: context,
       barrierDismissible: false,
       builder: (_) {
         return AlertDialog(
-          title: const Text("This is the title"),
-          content: const Text("This is the content"),
+          title: const Text("英単語追加"),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              TextField(
+                controller: englishWordController,
+                decoration: const InputDecoration(
+                  hintText: '英単語',
+                ),
+              ),
+              TextField(
+                controller: meaningController,
+                decoration: const InputDecoration(
+                  hintText: '意味',
+                ),
+              ),
+            ],
+          ),
           actions: [
             ElevatedButton(
-              child: const Text("Cancel"),
+              child: const Text("キャンセル"),
               onPressed: () => Navigator.pop(context),
             ),
             ElevatedButton(
-              child: const Text("OK"),
+              child: const Text("追加"),
               onPressed: () => print('OK'),
             ),
           ],
@@ -47,29 +67,11 @@ class EnglishWordsScreen extends HookWidget {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          TextField(
-            controller: englishWordController,
-            decoration: const InputDecoration(
-              hintText: '英単語',
-            ),
-          ),
-          TextField(
-            controller: meaningController,
-            decoration: const InputDecoration(
-              hintText: '意味',
-            ),
-          ),
-          Expanded(
-            child: ListView.builder(
-              itemCount: items.length,
-              itemBuilder: (BuildContext context, int index) {
-                return ListTile(title: Text(items[index]));
-              },
-            ),
-          ),
-        ],
+      body: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(title: Text(items[index]));
+        },
       ),
       floatingActionButton: FloatingActionButton(
         // onPressed: () {
@@ -84,7 +86,11 @@ class EnglishWordsScreen extends HookWidget {
         //   englishWordController.clear();
         //   meaningController.clear();
         // },
-        onPressed: () async => await _showFormDialog(context),
+        onPressed: () async => await _showFormDialog(
+          context,
+          englishWordController,
+          meaningController,
+        ),
         tooltip: '新規追加',
         child: const Icon(Icons.add),
       ),
