@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:playgroundflutterapp/model/english_word.dart';
 import 'package:playgroundflutterapp/services/english_words_service.dart';
 
 class EnglishWordsScreen extends HookWidget {
@@ -41,11 +42,11 @@ class EnglishWordsScreen extends HookWidget {
             ElevatedButton(
               child: const Text("追加"),
               onPressed: () {
-                final document = {
-                  'title': englishWordController.text,
-                  'japanese': meaningController.text,
-                };
-                EnglishWordsService().create(document);
+                final englishWord = EnglishWord(
+                  title: englishWordController.text,
+                  japanese: meaningController.text,
+                );
+                EnglishWordsService().create(englishWord);
                 debugPrint(
                     '英単語：${englishWordController.text}　意味：${meaningController.text}');
                 Navigator.pop(context);
