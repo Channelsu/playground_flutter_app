@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:playgroundflutterapp/services/english_words_service.dart';
 
 class EnglishWordsScreen extends HookWidget {
   const EnglishWordsScreen({super.key});
@@ -40,7 +41,19 @@ class EnglishWordsScreen extends HookWidget {
             ),
             ElevatedButton(
               child: const Text("追加"),
-              onPressed: () => print('OK'),
+              onPressed: () {
+                final service = EnglishWordsService();
+                final document = {
+                  'title': englishWordController.text,
+                  'japanese': meaningController.text,
+                };
+                service.create(document);
+                debugPrint(
+                    '英単語：${englishWordController.text}　意味：${meaningController.text}');
+                englishWordController.clear();
+                meaningController.clear();
+                Navigator.pop(context);
+              },
             ),
           ],
         );
