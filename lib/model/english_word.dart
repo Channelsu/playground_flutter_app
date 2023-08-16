@@ -8,4 +8,10 @@ class EnglishWord {
     required this.title,
     required this.japanese,
   });
+
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'title': title,
+        'japanese': japanese,
+      };
 }
