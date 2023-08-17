@@ -18,11 +18,9 @@ class EnglishWordsService {
     await docEnglishWord.set(json);
   }
 
-  Stream<List<Map<String, dynamic>>> getEnglishWords() {
-    return db
-        .collection('english-words')
-        .snapshots()
-        .map((snapshot) => snapshot.docs.map((doc) => doc.data()).toList());
+  Stream<List<EnglishWord>> getEnglishWords() {
+    return db.collection('english-words').snapshots().map((snapshot) =>
+        snapshot.docs.map((doc) => EnglishWord.fromJson(doc.data())).toList());
   }
 
   Future delete(String id) async {
