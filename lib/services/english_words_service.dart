@@ -24,4 +24,8 @@ class EnglishWordsService {
         .snapshots()
         .map((snapshot) => snapshot.docs.map((doc) => doc.data()).toList());
   }
+
+  Future delete(String id) async {
+    await db.collection('english-words').doc(id).delete();
+  }
 }
