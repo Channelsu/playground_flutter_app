@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:playgroundflutterapp/components/custom_snack_bar.dart';
@@ -47,6 +48,7 @@ class EnglishWordsScreen extends HookWidget {
                 final englishWord = EnglishWord(
                   title: englishWordController.text,
                   japanese: meaningController.text,
+                  createdAt: Timestamp.now(),
                 );
                 EnglishWordsService().create(englishWord);
                 debugPrint(
@@ -134,7 +136,7 @@ class EnglishWordsScreen extends HookWidget {
         builder:
             (BuildContext context, AsyncSnapshot<List<EnglishWord>> snapshot) {
           if (snapshot.hasError) {
-            return const Text('エラー');
+            return Text('エラー：${snapshot.error}');
           } else if (snapshot.hasData) {
             final englishWords = snapshot.data!;
             return ListView.builder(
