@@ -19,8 +19,13 @@ class EnglishWordsService {
   }
 
   Stream<List<EnglishWord>> getEnglishWords() {
-    return db.collection('english-words').snapshots().map((snapshot) =>
-        snapshot.docs.map((doc) => EnglishWord.fromJson(doc.data())).toList());
+    return db
+        .collection('english-words')
+        .orderBy('createdAt', descending: true)
+        .snapshots()
+        .map((snapshot) => snapshot.docs
+            .map((doc) => EnglishWord.fromJson(doc.data()))
+            .toList());
   }
 
   Future delete(String id) async {
