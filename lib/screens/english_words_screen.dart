@@ -48,7 +48,7 @@ class EnglishWordsScreen extends HookWidget {
                 );
                 EnglishWordsService().create(englishWord);
                 debugPrint(
-                    '英単語：${englishWordController.text}　意味：${meaningController.text}');
+                    '英単語：${englishWordController.text}　意味：${meaningController.text}を追加');
                 Navigator.pop(context);
                 final simpleSnackBar = SnackBar(
                   content: Text('${englishWordController.text}を追加しました'),
@@ -66,6 +66,50 @@ class EnglishWordsScreen extends HookWidget {
                 ScaffoldMessenger.of(context).showSnackBar(simpleSnackBar);
                 englishWordController.clear();
                 meaningController.clear();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Future _showDeleteConfirmDialog(
+    BuildContext context,
+    Map<String, dynamic> selectedEnglishWord,
+  ) {
+    return showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) {
+        return AlertDialog(
+          content: Text('${selectedEnglishWord['title']}を削除します。\nよろしいですか？'),
+          actions: [
+            ElevatedButton(
+              child: const Text("キャンセル"),
+              onPressed: () => Navigator.pop(context),
+            ),
+            ElevatedButton(
+              child: const Text("削除"),
+              onPressed: () {
+                EnglishWordsService().delete(selectedEnglishWord['id']);
+                debugPrint(
+                    '英単語：${selectedEnglishWord['title']}　意味：${selectedEnglishWord['japanese']}を削除');
+                Navigator.pop(context);
+                final simpleSnackBar = SnackBar(
+                  content: Text('${selectedEnglishWord['title']}を削除しました'),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  behavior: SnackBarBehavior.floating,
+                  showCloseIcon: true,
+                  elevation: 4.0,
+                  backgroundColor: Colors.orangeAccent,
+                  closeIconColor: Colors.white,
+                  clipBehavior: Clip.hardEdge,
+                  dismissDirection: DismissDirection.horizontal,
+                );
+                ScaffoldMessenger.of(context).showSnackBar(simpleSnackBar);
               },
             ),
           ],
@@ -101,7 +145,15 @@ class EnglishWordsScreen extends HookWidget {
             return ListView.builder(
               itemCount: englishWords.length,
               itemBuilder: (BuildContext context, int index) {
-                return ListTile(title: Text(englishWords[index]['title']));
+                final englishWord = englishWords[index];
+                return ListTile(
+                  title: Text(englishWord['title']),
+                  trailing: IconButton(
+                    icon: const Icon(Icons.delete),
+                    onPressed: () async =>
+                        await _showDeleteConfirmDialog(context, englishWord),
+                  ),
+                );
               },
             );
           } else {
