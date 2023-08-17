@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:playgroundflutterapp/components/custom_snack_bar.dart';
 import 'package:playgroundflutterapp/model/english_word.dart';
 import 'package:playgroundflutterapp/services/english_words_service.dart';
 
@@ -50,20 +51,12 @@ class EnglishWordsScreen extends HookWidget {
                 debugPrint(
                     '英単語：${englishWordController.text}　意味：${meaningController.text}を追加');
                 Navigator.pop(context);
-                final simpleSnackBar = SnackBar(
-                  content: Text('${englishWordController.text}を追加しました'),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  behavior: SnackBarBehavior.floating,
-                  showCloseIcon: true,
-                  elevation: 4.0,
-                  backgroundColor: Colors.orangeAccent,
-                  closeIconColor: Colors.white,
-                  clipBehavior: Clip.hardEdge,
-                  dismissDirection: DismissDirection.horizontal,
+                final customSnackBar = CustomSnackBar(
+                  context: context,
+                  englishWord: englishWordController.text,
+                  action: '追加',
                 );
-                ScaffoldMessenger.of(context).showSnackBar(simpleSnackBar);
+                ScaffoldMessenger.of(context).showSnackBar(customSnackBar);
                 englishWordController.clear();
                 meaningController.clear();
               },
@@ -96,20 +89,12 @@ class EnglishWordsScreen extends HookWidget {
                 debugPrint(
                     '英単語：${selectedEnglishWord['title']}　意味：${selectedEnglishWord['japanese']}を削除');
                 Navigator.pop(context);
-                final simpleSnackBar = SnackBar(
-                  content: Text('${selectedEnglishWord['title']}を削除しました'),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  behavior: SnackBarBehavior.floating,
-                  showCloseIcon: true,
-                  elevation: 4.0,
-                  backgroundColor: Colors.orangeAccent,
-                  closeIconColor: Colors.white,
-                  clipBehavior: Clip.hardEdge,
-                  dismissDirection: DismissDirection.horizontal,
+                final customSnackBar = CustomSnackBar(
+                  context: context,
+                  englishWord: selectedEnglishWord['title'],
+                  action: '削除',
                 );
-                ScaffoldMessenger.of(context).showSnackBar(simpleSnackBar);
+                ScaffoldMessenger.of(context).showSnackBar(customSnackBar);
               },
             ),
           ],
