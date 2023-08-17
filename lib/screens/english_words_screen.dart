@@ -104,6 +104,15 @@ class EnglishWordsScreen extends HookWidget {
     );
   }
 
+  Widget _buildTile(BuildContext context, EnglishWord englishWord) => ListTile(
+        title: Text(englishWord.title),
+        trailing: IconButton(
+          icon: const Icon(Icons.delete),
+          onPressed: () async =>
+              await _showDeleteConfirmDialog(context, englishWord),
+        ),
+      );
+
   @override
   Widget build(BuildContext context) {
     final englishWordController = useTextEditingController();
@@ -132,14 +141,7 @@ class EnglishWordsScreen extends HookWidget {
               itemCount: englishWords.length,
               itemBuilder: (BuildContext context, int index) {
                 final englishWord = englishWords[index];
-                return ListTile(
-                  title: Text(englishWord.title),
-                  trailing: IconButton(
-                    icon: const Icon(Icons.delete),
-                    onPressed: () async =>
-                        await _showDeleteConfirmDialog(context, englishWord),
-                  ),
-                );
+                return _buildTile(context, englishWord);
               },
             );
           } else {
