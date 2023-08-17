@@ -14,4 +14,10 @@ class EnglishWord {
         'title': title,
         'japanese': japanese,
       };
+
+  static EnglishWord fromJson(Map<String, dynamic> json) => EnglishWord(
+        id: json['id'],
+        title: json['title'],
+        japanese: json['japanese'],
+      );
 }
