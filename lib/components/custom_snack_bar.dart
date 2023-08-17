@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:playgroundflutterapp/constants/strings.dart';
 
 class CustomSnackBar extends SnackBar {
   CustomSnackBar({
     required BuildContext context,
     required String englishWord,
-    required String action,
+    required ActionType action,
     super.key,
   }) : super(
-          content: Text('$englishWordを$actionしました'),
+          content: Text('$englishWordを${action.inJapanese}しました'),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
