@@ -103,9 +103,11 @@ class EnglishWordsScreen extends HookWidget {
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
                   title: Text(englishWords[index]['title']),
-                  trailing: const IconButton(
-                    icon: Icon(Icons.delete),
-                    onPressed: null,
+                  trailing: IconButton(
+                    icon: const Icon(Icons.delete),
+                    onPressed: () {
+                      EnglishWordsService().delete(englishWords[index]['id']);
+                    },
                   ),
                 );
               },
