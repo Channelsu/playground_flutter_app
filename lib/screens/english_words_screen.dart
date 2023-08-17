@@ -70,14 +70,14 @@ class EnglishWordsScreen extends HookWidget {
 
   Future _showDeleteConfirmDialog(
     BuildContext context,
-    Map<String, dynamic> selectedEnglishWord,
+    EnglishWord selectedEnglishWord,
   ) {
     return showDialog(
       context: context,
       barrierDismissible: false,
       builder: (_) {
         return AlertDialog(
-          content: Text('${selectedEnglishWord['title']}を削除します。\nよろしいですか？'),
+          content: Text('${selectedEnglishWord.title}を削除します。\nよろしいですか？'),
           actions: [
             ElevatedButton(
               child: const Text("キャンセル"),
@@ -86,13 +86,13 @@ class EnglishWordsScreen extends HookWidget {
             ElevatedButton(
               child: const Text("削除"),
               onPressed: () {
-                EnglishWordsService().delete(selectedEnglishWord['id']);
+                EnglishWordsService().delete(selectedEnglishWord.id);
                 debugPrint(
-                    '英単語：${selectedEnglishWord['title']}　意味：${selectedEnglishWord['japanese']}を削除');
+                    '英単語：${selectedEnglishWord.title}　意味：${selectedEnglishWord.japanese}を削除');
                 Navigator.pop(context);
                 final customSnackBar = CustomSnackBar(
                   context: context,
-                  englishWord: selectedEnglishWord['title'],
+                  englishWord: selectedEnglishWord.title,
                   action: ActionType.delete,
                 );
                 ScaffoldMessenger.of(context).showSnackBar(customSnackBar);
@@ -120,10 +120,10 @@ class EnglishWordsScreen extends HookWidget {
           ),
         ),
       ),
-      body: StreamBuilder<List<Map<String, dynamic>>>(
+      body: StreamBuilder<List<EnglishWord>>(
         stream: EnglishWordsService().getEnglishWords(),
-        builder: (BuildContext context,
-            AsyncSnapshot<List<Map<String, dynamic>>> snapshot) {
+        builder:
+            (BuildContext context, AsyncSnapshot<List<EnglishWord>> snapshot) {
           if (snapshot.hasError) {
             return const Text('エラー');
           } else if (snapshot.hasData) {
@@ -133,7 +133,7 @@ class EnglishWordsScreen extends HookWidget {
               itemBuilder: (BuildContext context, int index) {
                 final englishWord = englishWords[index];
                 return ListTile(
-                  title: Text(englishWord['title']),
+                  title: Text(englishWord.title),
                   trailing: IconButton(
                     icon: const Icon(Icons.delete),
                     onPressed: () async =>
