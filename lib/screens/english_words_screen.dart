@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:playgroundflutterapp/components/custom_snack_bar.dart';
+import 'package:playgroundflutterapp/constants/strings.dart';
 import 'package:playgroundflutterapp/model/english_word.dart';
 import 'package:playgroundflutterapp/services/english_words_service.dart';
 
@@ -54,7 +55,7 @@ class EnglishWordsScreen extends HookWidget {
                 final customSnackBar = CustomSnackBar(
                   context: context,
                   englishWord: englishWordController.text,
-                  action: '追加',
+                  action: ActionType.add,
                 );
                 ScaffoldMessenger.of(context).showSnackBar(customSnackBar);
                 englishWordController.clear();
@@ -92,7 +93,7 @@ class EnglishWordsScreen extends HookWidget {
                 final customSnackBar = CustomSnackBar(
                   context: context,
                   englishWord: selectedEnglishWord['title'],
-                  action: '削除',
+                  action: ActionType.delete,
                 );
                 ScaffoldMessenger.of(context).showSnackBar(customSnackBar);
               },
