@@ -107,8 +107,15 @@ class EnglishWordsScreen extends HookWidget {
     );
   }
 
-  Widget _buildTile(BuildContext context, EnglishWord englishWord) => ListTile(
-        title: Text(englishWord.title),
+  Widget _buildTile(
+    BuildContext context,
+    EnglishWord englishWord,
+    bool visibleJapanese,
+  ) =>
+      ListTile(
+        title: visibleJapanese
+            ? Text(englishWord.japanese)
+            : Text(englishWord.title),
         trailing: IconButton(
           icon: const Icon(Icons.delete),
           onPressed: () async =>
@@ -118,6 +125,7 @@ class EnglishWordsScreen extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
+    var visibleJapanese = useState(false);
     final englishWordController = useTextEditingController();
     final meaningController = useTextEditingController();
 
@@ -131,6 +139,15 @@ class EnglishWordsScreen extends HookWidget {
             color: Colors.orange,
           ),
         ),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.autorenew),
+            color: visibleJapanese.value ? Colors.orange : Colors.grey,
+            onPressed: () {
+              visibleJapanese.value = !visibleJapanese.value;
+            },
+          ),
+        ],
       ),
       body: StreamBuilder<List<EnglishWord>>(
         stream: EnglishWordsService().getEnglishWords(),
@@ -144,7 +161,7 @@ class EnglishWordsScreen extends HookWidget {
               itemCount: englishWords.length,
               itemBuilder: (BuildContext context, int index) {
                 final englishWord = englishWords[index];
-                return _buildTile(context, englishWord);
+                return _buildTile(context, englishWord, visibleJapanese.value);
               },
             );
           } else {
