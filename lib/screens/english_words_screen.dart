@@ -49,6 +49,7 @@ class EnglishWordsScreen extends HookWidget {
                   title: englishWordController.text,
                   japanese: meaningController.text,
                   createdAt: Timestamp.now(),
+                  updatedAt: Timestamp.now(),
                 );
                 EnglishWordsService().create(englishWord);
                 debugPrint(

@@ -5,12 +5,14 @@ class EnglishWord {
   final String title;
   final String japanese;
   Timestamp createdAt;
+  Timestamp updatedAt;
 
   EnglishWord({
     this.id = '',
     required this.title,
     required this.japanese,
     required this.createdAt,
+    required this.updatedAt,
   });
 
   Map<String, dynamic> toJson() => {
@@ -18,6 +20,7 @@ class EnglishWord {
         'title': title,
         'japanese': japanese,
         'createdAt': createdAt,
+        'updatedAt': updatedAt,
       };
 
   static EnglishWord fromJson(Map<String, dynamic> json) {
@@ -26,6 +29,7 @@ class EnglishWord {
       title: json['title'],
       japanese: json['japanese'],
       createdAt: json['createdAt'] as Timestamp,
+      updatedAt: json['updatedAt'] as Timestamp,
     );
   }
 }
