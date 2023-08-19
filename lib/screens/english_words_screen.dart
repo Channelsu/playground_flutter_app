@@ -118,7 +118,26 @@ class EnglishWordsScreen extends HookWidget {
             ),
             ElevatedButton(
               child: const Text("OK"),
-              onPressed: () {},
+              onPressed: () {
+                final updatedEnglishWord = EnglishWord(
+                  title: englishWordController.text,
+                  japanese: meaningController.text,
+                  updatedAt: Timestamp.now(),
+                );
+                EnglishWordsService().update(
+                  selectedEnglishWord.id,
+                  updatedEnglishWord,
+                );
+                Navigator.pop(context);
+                final customSnackBar = CustomSnackBar(
+                  context: context,
+                  englishWord: englishWordController.text,
+                  action: ActionType.update,
+                );
+                ScaffoldMessenger.of(context).showSnackBar(customSnackBar);
+                englishWordController.clear();
+                meaningController.clear();
+              },
             ),
           ],
         );
