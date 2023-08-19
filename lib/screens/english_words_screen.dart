@@ -40,7 +40,11 @@ class EnglishWordsScreen extends HookWidget {
           actions: [
             ElevatedButton(
               child: const Text("キャンセル"),
-              onPressed: () => Navigator.pop(context),
+              onPressed: () {
+                englishWordController.clear();
+                meaningController.clear();
+                Navigator.pop(context);
+              },
             ),
             ElevatedButton(
               child: const Text("追加"),
@@ -106,7 +110,11 @@ class EnglishWordsScreen extends HookWidget {
           actions: [
             ElevatedButton(
               child: const Text("キャンセル"),
-              onPressed: () => Navigator.pop(context),
+              onPressed: () {
+                englishWordController.clear();
+                meaningController.clear();
+                Navigator.pop(context);
+              },
             ),
             ElevatedButton(
               child: const Text("OK"),
