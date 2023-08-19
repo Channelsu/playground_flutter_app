@@ -25,6 +25,7 @@ class EnglishWordsScreen extends HookWidget {
             children: [
               TextField(
                 controller: englishWordController,
+                autofocus: true,
                 decoration: const InputDecoration(
                   hintText: '英単語',
                 ),
@@ -95,6 +96,7 @@ class EnglishWordsScreen extends HookWidget {
             children: [
               TextField(
                 controller: englishWordController,
+                autofocus: true,
                 decoration: const InputDecoration(
                   hintText: '英単語',
                 ),
