@@ -71,6 +71,53 @@ class EnglishWordsScreen extends HookWidget {
     );
   }
 
+  Future _showEditDialog(
+    BuildContext context,
+    EnglishWord selectedEnglishWord,
+    TextEditingController englishWordController,
+    TextEditingController meaningController,
+  ) {
+    return showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) {
+        // 初期値をセット
+        englishWordController.text = selectedEnglishWord.title;
+        meaningController.text = selectedEnglishWord.japanese;
+        return AlertDialog(
+          title: const Text("編集"),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              TextField(
+                controller: englishWordController,
+                decoration: const InputDecoration(
+                  hintText: '英単語',
+                ),
+              ),
+              TextField(
+                controller: meaningController,
+                decoration: const InputDecoration(
+                  hintText: '意味',
+                ),
+              ),
+            ],
+          ),
+          actions: [
+            ElevatedButton(
+              child: const Text("キャンセル"),
+              onPressed: () => Navigator.pop(context),
+            ),
+            ElevatedButton(
+              child: const Text("OK"),
+              onPressed: () {},
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   Future _showDeleteConfirmDialog(
     BuildContext context,
     EnglishWord selectedEnglishWord,
@@ -111,6 +158,8 @@ class EnglishWordsScreen extends HookWidget {
     BuildContext context,
     EnglishWord englishWord,
     bool visibleJapanese,
+    TextEditingController englishWordController,
+    TextEditingController meaningController,
   ) =>
       ListTile(
         title: visibleJapanese
@@ -120,7 +169,12 @@ class EnglishWordsScreen extends HookWidget {
           children: [
             IconButton(
               icon: const Icon(Icons.edit),
-              onPressed: () {},
+              onPressed: () async => await _showEditDialog(
+                context,
+                englishWord,
+                englishWordController,
+                meaningController,
+              ),
             ),
             IconButton(
               icon: const Icon(Icons.delete),
@@ -169,7 +223,13 @@ class EnglishWordsScreen extends HookWidget {
               itemCount: englishWords.length,
               itemBuilder: (BuildContext context, int index) {
                 final englishWord = englishWords[index];
-                return _buildTile(context, englishWord, visibleJapanese.value);
+                return _buildTile(
+                  context,
+                  englishWord,
+                  visibleJapanese.value,
+                  englishWordController,
+                  meaningController,
+                );
               },
             );
           } else {
