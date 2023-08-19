@@ -28,6 +28,15 @@ class EnglishWordsService {
             .toList());
   }
 
+  Future update(String id, EnglishWord updatedEnglishWord) async {
+    final docEnglishWord = db.collection('english-words').doc(id);
+    docEnglishWord.update({
+      'title': updatedEnglishWord.title,
+      'japanese': updatedEnglishWord.japanese,
+      'updatedAt': Timestamp.now(),
+    });
+  }
+
   Future delete(String id) async {
     await db.collection('english-words').doc(id).delete();
   }

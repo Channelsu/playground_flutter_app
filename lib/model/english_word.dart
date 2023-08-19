@@ -4,14 +4,14 @@ class EnglishWord {
   String id;
   final String title;
   final String japanese;
-  Timestamp createdAt;
+  Timestamp? createdAt;
   Timestamp updatedAt;
 
   EnglishWord({
     this.id = '',
     required this.title,
     required this.japanese,
-    required this.createdAt,
+    this.createdAt,
     required this.updatedAt,
   });
 
