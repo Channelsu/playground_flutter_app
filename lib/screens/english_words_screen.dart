@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:playgroundflutterapp/components/custom_snack_bar.dart';
 import 'package:playgroundflutterapp/constants/strings.dart';
 import 'package:playgroundflutterapp/model/english_word.dart';
@@ -190,27 +191,46 @@ class EnglishWordsScreen extends HookWidget {
     TextEditingController englishWordController,
     TextEditingController meaningController,
   ) =>
-      ListTile(
-        title: visibleJapanese
-            ? Text(englishWord.japanese)
-            : Text(englishWord.title),
-        trailing: Wrap(
+      Slidable(
+        startActionPane: ActionPane(
+          key: const ValueKey(0),
+          motion: const ScrollMotion(),
           children: [
-            IconButton(
-              icon: const Icon(Icons.edit),
-              onPressed: () async => await _showEditDialog(
-                context,
-                englishWord,
-                englishWordController,
-                meaningController,
-              ),
-            ),
-            IconButton(
-              icon: const Icon(Icons.delete),
-              onPressed: () async =>
+            SlidableAction(
+              onPressed: (_) async =>
                   await _showDeleteConfirmDialog(context, englishWord),
+              backgroundColor: Colors.red,
+              foregroundColor: Colors.white,
+              icon: Icons.delete,
+              label: '削除',
             ),
           ],
+        ),
+        child: ListTile(
+          contentPadding: const EdgeInsets.symmetric(horizontal: 20),
+          title: visibleJapanese
+              ? Text(englishWord.japanese)
+              : Text(englishWord.title),
+          trailing: Wrap(
+            children: [
+              IconButton(
+                constraints: const BoxConstraints(),
+                icon: const Icon(Icons.edit),
+                onPressed: () async => await _showEditDialog(
+                  context,
+                  englishWord,
+                  englishWordController,
+                  meaningController,
+                ),
+              ),
+              IconButton(
+                constraints: const BoxConstraints(),
+                icon: const Icon(Icons.delete),
+                onPressed: () async =>
+                    await _showDeleteConfirmDialog(context, englishWord),
+              ),
+            ],
+          ),
         ),
       );
 
