@@ -116,10 +116,18 @@ class EnglishWordsScreen extends HookWidget {
         title: visibleJapanese
             ? Text(englishWord.japanese)
             : Text(englishWord.title),
-        trailing: IconButton(
-          icon: const Icon(Icons.delete),
-          onPressed: () async =>
-              await _showDeleteConfirmDialog(context, englishWord),
+        trailing: Wrap(
+          children: [
+            IconButton(
+              icon: const Icon(Icons.edit),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: const Icon(Icons.delete),
+              onPressed: () async =>
+                  await _showDeleteConfirmDialog(context, englishWord),
+            ),
+          ],
         ),
       );
 
