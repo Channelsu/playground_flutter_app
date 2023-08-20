@@ -193,9 +193,21 @@ class EnglishWordsScreen extends HookWidget {
   ) =>
       Slidable(
         startActionPane: ActionPane(
-          key: const ValueKey(0),
+          extentRatio: 0.4,
           motion: const ScrollMotion(),
           children: [
+            SlidableAction(
+              onPressed: (_) async => await _showEditDialog(
+                context,
+                englishWord,
+                englishWordController,
+                meaningController,
+              ),
+              backgroundColor: Colors.green,
+              foregroundColor: Colors.white,
+              icon: Icons.edit,
+              label: '編集',
+            ),
             SlidableAction(
               onPressed: (_) async =>
                   await _showDeleteConfirmDialog(context, englishWord),
