@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:playgroundflutterapp/constants/colors.dart';
 import 'package:playgroundflutterapp/screens/cart_screen.dart';
-import 'package:playgroundflutterapp/screens/english_words_screen.dart';
+import 'package:playgroundflutterapp/screens/english_words_screens/english_words_screen.dart';
 import 'package:playgroundflutterapp/screens/home_screen.dart';
 import 'package:playgroundflutterapp/screens/hotels_screen.dart';
 import 'package:playgroundflutterapp/screens/playground_screen.dart';
@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
     const CartScreen(),
     const PlaygroundScreen(),
     const WidgetsCollectionScreen(),
-    EnglishWordsScreen(),
+    const EnglishWordsScreen(),
     const SettingsScreen(),
   ];
 
