@@ -7,8 +7,19 @@ class EnglishWordDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(
+    return Scaffold(
+      appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.black), // 戻る矢印の色
+        backgroundColor: Colors.white,
+        elevation: 1,
+        title: const Text(
+          '英単語詳細',
+          style: TextStyle(
+            color: Colors.orange,
+          ),
+        ),
+      ),
+      body: const Column(
         children: [
           Center(
             child: Text('あああ'),
