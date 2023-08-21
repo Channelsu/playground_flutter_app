@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:playgroundflutterapp/constants/colors.dart';
+import 'package:playgroundflutterapp/router.dart';
 import 'package:playgroundflutterapp/screens/cart_screen.dart';
-import 'package:playgroundflutterapp/screens/english_words_screen.dart';
+import 'package:playgroundflutterapp/screens/english_words_screens/english_words_screen.dart';
 import 'package:playgroundflutterapp/screens/home_screen.dart';
 import 'package:playgroundflutterapp/screens/hotels_screen.dart';
 import 'package:playgroundflutterapp/screens/playground_screen.dart';
@@ -28,12 +29,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerDelegate: goRouter.routerDelegate,
+      routeInformationParser: goRouter.routeInformationParser,
+      routeInformationProvider: goRouter.routeInformationProvider,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: customSwatch,
       ),
-      home: const MyHomePage(),
+      // home: const MyHomePage(),
     );
   }
 }
@@ -54,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
     const CartScreen(),
     const PlaygroundScreen(),
     const WidgetsCollectionScreen(),
-    EnglishWordsScreen(),
+    const EnglishWordsScreen(),
     const SettingsScreen(),
   ];
 
