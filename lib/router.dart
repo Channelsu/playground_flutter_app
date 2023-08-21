@@ -35,9 +35,10 @@ final goRouter = GoRouter(
       path: '/english-words-detail',
       name: 'englishWordsDetail',
       pageBuilder: (context, state) {
+        EnglishWord englishWord = state.extra as EnglishWord;
         return MaterialPage(
           key: state.pageKey,
-          child: EnglishWordDetailScreen(state.extra as EnglishWord),
+          child: EnglishWordDetailScreen(englishWord),
         );
       },
     ),
