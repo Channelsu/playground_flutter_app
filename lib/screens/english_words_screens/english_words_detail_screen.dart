@@ -19,12 +19,14 @@ class EnglishWordDetailScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: const Column(
-        children: [
-          Center(
-            child: Text('あああ'),
-          )
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(englishWord.title),
+            Text(englishWord.japanese),
+          ],
+        ),
       ),
     );
   }
