@@ -9,7 +9,11 @@ import 'package:playgroundflutterapp/model/english_word.dart';
 import 'package:playgroundflutterapp/services/english_words_service.dart';
 
 class EnglishWordListScreen extends HookWidget {
-  const EnglishWordListScreen({super.key});
+  bool visibleJapanese;
+  EnglishWordListScreen({
+    super.key,
+    required this.visibleJapanese,
+  });
 
   Future _showFormDialog(
     BuildContext context,
@@ -252,7 +256,6 @@ class EnglishWordListScreen extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    var visibleJapanese = useState(false);
     final englishWordController = useTextEditingController();
     final meaningController = useTextEditingController();
 
@@ -272,7 +275,7 @@ class EnglishWordListScreen extends HookWidget {
                 return _buildTile(
                   context,
                   englishWord,
-                  visibleJapanese.value,
+                  visibleJapanese,
                   englishWordController,
                   meaningController,
                 );

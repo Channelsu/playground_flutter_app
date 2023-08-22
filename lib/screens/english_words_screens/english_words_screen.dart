@@ -46,9 +46,10 @@ class EnglishWordsScreen extends HookWidget {
           Expanded(
             child: TabBarView(
               controller: tabController,
-              children: const [
-                EnglishWordListScreen(),
-                Center(child: Text('お気に入り画面', style: TextStyle(fontSize: 32))),
+              children: [
+                EnglishWordListScreen(visibleJapanese: visibleJapanese.value),
+                const Center(
+                    child: Text('お気に入り画面', style: TextStyle(fontSize: 32))),
               ],
             ),
           ),
