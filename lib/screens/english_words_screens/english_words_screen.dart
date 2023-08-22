@@ -10,6 +10,10 @@ import 'package:playgroundflutterapp/services/english_words_service.dart';
 
 class EnglishWordsScreen extends HookWidget {
   const EnglishWordsScreen({super.key});
+  static const tabs = [
+    Tab(text: '一覧'),
+    Tab(text: 'お気に入り'),
+  ];
 
   Future _showFormDialog(
     BuildContext context,
@@ -252,9 +256,19 @@ class EnglishWordsScreen extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
+    final tabIndex = useState(0);
+    final tabController = useTabController(initialLength: tabs.length);
     var visibleJapanese = useState(false);
     final englishWordController = useTextEditingController();
     final meaningController = useTextEditingController();
+
+    //controllerに変化があった時ここを通る
+    tabController.addListener(() {
+      // タブが切り替わった時の処理を記述
+      if (!tabController.indexIsChanging) {
+        tabIndex.value = tabController.index;
+      }
+    });
 
     return Scaffold(
       appBar: AppBar(
@@ -276,40 +290,64 @@ class EnglishWordsScreen extends HookWidget {
           ),
         ],
       ),
-      body: StreamBuilder<List<EnglishWord>>(
-        stream: EnglishWordsService().getEnglishWords(),
-        builder:
-            (BuildContext context, AsyncSnapshot<List<EnglishWord>> snapshot) {
-          if (snapshot.hasError) {
-            return Text('エラー：${snapshot.error}');
-          } else if (snapshot.hasData) {
-            final englishWords = snapshot.data!;
-            return ListView.builder(
-              itemCount: englishWords.length,
-              itemBuilder: (BuildContext context, int index) {
-                final englishWord = englishWords[index];
-                return _buildTile(
-                  context,
-                  englishWord,
-                  visibleJapanese.value,
-                  englishWordController,
-                  meaningController,
-                );
-              },
-            );
-          } else {
-            return const Center(child: CircularProgressIndicator());
-          }
-        },
+      body: Column(
+        children: [
+          // タブ表示部分（この部分はAppBarのbottomに設置することもできる）
+          TabBar(
+            controller: tabController,
+            tabs: tabs,
+            labelColor: Theme.of(context).primaryColor,
+          ),
+          // タブの中身
+          Expanded(
+            child: TabBarView(
+              controller: tabController,
+              children: [
+                StreamBuilder<List<EnglishWord>>(
+                  stream: EnglishWordsService().getEnglishWords(),
+                  builder: (BuildContext context,
+                      AsyncSnapshot<List<EnglishWord>> snapshot) {
+                    if (snapshot.hasError) {
+                      return Text('エラー：${snapshot.error}');
+                    } else if (snapshot.hasData) {
+                      final englishWords = snapshot.data!;
+                      return ListView.builder(
+                        itemCount: englishWords.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          final englishWord = englishWords[index];
+                          return _buildTile(
+                            context,
+                            englishWord,
+                            visibleJapanese.value,
+                            englishWordController,
+                            meaningController,
+                          );
+                        },
+                      );
+                    } else {
+                      return const Center(child: CircularProgressIndicator());
+                    }
+                  },
+                ),
+                const Center(
+                    child: Text('お気に入り画面', style: TextStyle(fontSize: 32))),
+              ],
+            ),
+          ),
+        ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async => await _showFormDialog(
-          context,
-          englishWordController,
-          meaningController,
+      // 英単語一覧画面の時のみFABが見れる
+      floatingActionButton: Visibility(
+        visible: tabIndex.value == 0,
+        child: FloatingActionButton(
+          onPressed: () async => await _showFormDialog(
+            context,
+            englishWordController,
+            meaningController,
+          ),
+          tooltip: '新規追加',
+          child: const Icon(Icons.add),
         ),
-        tooltip: '新規追加',
-        child: const Icon(Icons.add),
       ),
     );
   }
