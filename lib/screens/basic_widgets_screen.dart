@@ -52,13 +52,13 @@ class BasicWidgetsScreen extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               height: 128,
-              child: Image.asset('assets/widget_images/app_bar.png'),
+              child: Image.asset('assets/widget_images/column.png'),
             ),
             // ウィジェット名
             SizedBox(
               width: double.infinity,
               child: Text(
-                'AppBar',
+                'Column',
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.titleLarge,
@@ -87,13 +87,13 @@ class BasicWidgetsScreen extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               height: 128,
-              child: Image.asset('assets/widget_images/app_bar.png'),
+              child: Image.asset('assets/widget_images/container.png'),
             ),
             // ウィジェット名
             SizedBox(
               width: double.infinity,
               child: Text(
-                'AppBar',
+                'Container',
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.titleLarge,
@@ -122,13 +122,13 @@ class BasicWidgetsScreen extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               height: 128,
-              child: Image.asset('assets/widget_images/app_bar.png'),
+              child: Image.asset('assets/widget_images/elevated_button.png'),
             ),
             // ウィジェット名
             SizedBox(
               width: double.infinity,
               child: Text(
-                'AppBar',
+                'ElevatedButton',
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.titleLarge,
@@ -157,13 +157,13 @@ class BasicWidgetsScreen extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               height: 128,
-              child: Image.asset('assets/widget_images/app_bar.png'),
+              child: Image.asset('assets/widget_images/flutter_logo.png'),
             ),
             // ウィジェット名
             SizedBox(
               width: double.infinity,
               child: Text(
-                'AppBar',
+                'FlutterLogo',
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.titleLarge,
@@ -192,13 +192,13 @@ class BasicWidgetsScreen extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               height: 128,
-              child: Image.asset('assets/widget_images/app_bar.png'),
+              child: Image.asset('assets/widget_images/icon.png'),
             ),
             // ウィジェット名
             SizedBox(
               width: double.infinity,
               child: Text(
-                'AppBar',
+                'Icon',
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.titleLarge,
@@ -227,13 +227,153 @@ class BasicWidgetsScreen extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               height: 128,
-              child: Image.asset('assets/widget_images/app_bar.png'),
+              child: Image.asset('assets/widget_images/image.png'),
             ),
             // ウィジェット名
             SizedBox(
               width: double.infinity,
               child: Text(
-                'AppBar',
+                'Image',
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+            ),
+            // ウィジェット説明文
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.only(left: 4),
+              child: Text(
+                '説明文説明文説明文説明文説明文',
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+            ),
+          ],
+        ),
+      ),
+      Card(
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(0),
+        ),
+        child: Column(
+          children: [
+            // ウィジェット画像
+            SizedBox(
+              width: double.infinity,
+              height: 128,
+              child: Image.asset('assets/widget_images/flutter_logo.png'),
+            ),
+            // ウィジェット名
+            SizedBox(
+              width: double.infinity,
+              child: Text(
+                'Placeholder',
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+            ),
+            // ウィジェット説明文
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.only(left: 4),
+              child: Text(
+                '説明文説明文説明文説明文説明文',
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+            ),
+          ],
+        ),
+      ),
+      Card(
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(0),
+        ),
+        child: Column(
+          children: [
+            // ウィジェット画像
+            SizedBox(
+              width: double.infinity,
+              height: 128,
+              child: Image.asset('assets/widget_images/row.png'),
+            ),
+            // ウィジェット名
+            SizedBox(
+              width: double.infinity,
+              child: Text(
+                'Row',
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+            ),
+            // ウィジェット説明文
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.only(left: 4),
+              child: Text(
+                '説明文説明文説明文説明文説明文',
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+            ),
+          ],
+        ),
+      ),
+      Card(
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(0),
+        ),
+        child: Column(
+          children: [
+            // ウィジェット画像
+            SizedBox(
+              width: double.infinity,
+              height: 128,
+              child: Image.asset('assets/widget_images/scaffold.png'),
+            ),
+            // ウィジェット名
+            SizedBox(
+              width: double.infinity,
+              child: Text(
+                'Scaffold',
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+            ),
+            // ウィジェット説明文
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.only(left: 4),
+              child: Text(
+                '説明文説明文説明文説明文説明文',
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+            ),
+          ],
+        ),
+      ),
+      Card(
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(0),
+        ),
+        child: Column(
+          children: [
+            // ウィジェット画像
+            SizedBox(
+              width: double.infinity,
+              height: 128,
+              child: Image.asset('assets/widget_images/text.png'),
+            ),
+            // ウィジェット名
+            SizedBox(
+              width: double.infinity,
+              child: Text(
+                'Text',
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.titleLarge,
