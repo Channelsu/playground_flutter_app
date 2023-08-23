@@ -40,13 +40,14 @@ class _WidgetsCollectionScreenState extends State<WidgetsCollectionScreen> {
             unselectedLabelColor: Colors.grey,
           ),
         ),
-        body: const TabBarView(
+        body: TabBarView(
           children: [
             BasicWidgetsScreen(),
-            Center(child: Text('レイアウト', style: TextStyle(fontSize: 24))),
-            Center(child: Text('入力', style: TextStyle(fontSize: 24))),
-            Center(child: Text('テキスト', style: TextStyle(fontSize: 24))),
-            Center(child: Text('アクセシビリティ', style: TextStyle(fontSize: 24))),
+            const Center(child: Text('レイアウト', style: TextStyle(fontSize: 24))),
+            const Center(child: Text('入力', style: TextStyle(fontSize: 24))),
+            const Center(child: Text('テキスト', style: TextStyle(fontSize: 24))),
+            const Center(
+                child: Text('アクセシビリティ', style: TextStyle(fontSize: 24))),
           ],
         ),
       ),
