@@ -49,7 +49,7 @@ class BasicWidgetsScreen extends StatelessWidget {
         overview: '今後ウィジェットが追加される場所を表すためのボックスを描くウィジェットです。',
       ),
       WidgetCard(
-        widgetName: 'Rpw',
+        widgetName: 'Row',
         imageName: 'row',
         overview: '子ウィジェットのリストを水平方向に配置するウィジェットです。',
       ),
