@@ -24,7 +24,7 @@ class WidgetDetailScreen extends StatelessWidget {
       body: Column(
         children: [
           Hero(
-            tag: wgt.name,
+            tag: wgt.id,
             child: Container(
               padding: const EdgeInsets.symmetric(vertical: 20),
               width: double.infinity,
@@ -32,9 +32,12 @@ class WidgetDetailScreen extends StatelessWidget {
               child: Image.asset(wgt.imagePath),
             ),
           ),
-          Text(
-            wgt.name,
-            style: const TextStyle(fontSize: 28),
+          Hero(
+            tag: wgt.name,
+            child: Text(
+              wgt.name,
+              style: Theme.of(context).textTheme.displaySmall,
+            ),
           ),
         ],
       ),

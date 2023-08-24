@@ -21,7 +21,7 @@ class WidgetCard extends StatelessWidget {
           children: [
             // ウィジェット画像
             Hero(
-              tag: wgt.name,
+              tag: wgt.id,
               child: SizedBox(
                 width: double.infinity,
                 height: 128,
@@ -31,10 +31,13 @@ class WidgetCard extends StatelessWidget {
             // ウィジェット名
             SizedBox(
               width: double.infinity,
-              child: Text(
-                wgt.name,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.titleLarge,
+              child: Hero(
+                tag: wgt.name,
+                child: Text(
+                  wgt.name,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
               ),
             ),
             // ウィジェット概要
