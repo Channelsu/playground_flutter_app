@@ -28,7 +28,7 @@ class WidgetDetailScreen extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.symmetric(vertical: 20),
               width: double.infinity,
-              height: 300,
+              height: 280,
               child: Image.asset(wgt.imagePath),
             ),
           ),
@@ -36,7 +36,9 @@ class WidgetDetailScreen extends StatelessWidget {
             tag: wgt.name,
             child: Text(
               wgt.name,
-              style: Theme.of(context).textTheme.displaySmall,
+              style: Theme.of(context).textTheme.headlineMedium!.merge(
+                    const TextStyle(fontWeight: FontWeight.bold),
+                  ),
             ),
           ),
         ],
