@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:playgroundflutterapp/model/wgt.dart';
 
 class WidgetCard extends StatelessWidget {
@@ -47,7 +48,9 @@ class WidgetCard extends StatelessWidget {
           ],
         ),
       ),
-      onTap: () {},
+      onTap: () {
+        context.push('/widget-detail', extra: wgt);
+      },
     );
   }
 }
