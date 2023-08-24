@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class WidgetCard extends StatelessWidget {
   String widgetName;
-  String imageName;
+  String imagePath;
   String overview;
   WidgetCard({
     required this.widgetName,
-    required this.imageName,
+    required this.imagePath,
     required this.overview,
     super.key,
   });
@@ -24,7 +24,7 @@ class WidgetCard extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             height: 128,
-            child: Image.asset('assets/widget_images/$imageName.png'),
+            child: Image.asset(imagePath),
           ),
           // ウィジェット名
           SizedBox(

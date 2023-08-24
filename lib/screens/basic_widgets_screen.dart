@@ -19,7 +19,7 @@ class BasicWidgetsScreen extends StatelessWidget {
           for (final wgt in widgetList)
             WidgetCard(
               widgetName: wgt.name,
-              imageName: wgt.imagePath,
+              imagePath: wgt.imagePath,
               overview: wgt.overview,
             )
         ],
