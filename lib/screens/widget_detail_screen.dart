@@ -11,18 +11,32 @@ class WidgetDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(wgt.name),
-      // ),
-      body: Hero(
-        tag: wgt.name,
-        child: const Material(
-            // child: Ink.image(
-            //   image: NetworkImage(hotel.imageLink),
-            //   height: 240,
-            //   fit: BoxFit.cover,
-            // ),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        iconTheme: const IconThemeData(color: Colors.black), // 戻るボタンの色
+        title: Text(
+          wgt.name,
+          style: const TextStyle(
+            color: Colors.blue,
+          ),
+        ),
+      ),
+      body: Column(
+        children: [
+          Hero(
+            tag: wgt.name,
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 20),
+              width: double.infinity,
+              height: 300,
+              child: Image.asset(wgt.imagePath),
             ),
+          ),
+          Text(
+            wgt.name,
+            style: const TextStyle(fontSize: 28),
+          ),
+        ],
       ),
     );
   }

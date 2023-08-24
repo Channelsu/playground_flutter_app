@@ -20,10 +20,13 @@ class WidgetCard extends StatelessWidget {
         child: Column(
           children: [
             // ウィジェット画像
-            SizedBox(
-              width: double.infinity,
-              height: 128,
-              child: Image.asset(wgt.imagePath),
+            Hero(
+              tag: wgt.name,
+              child: SizedBox(
+                width: double.infinity,
+                height: 128,
+                child: Image.asset(wgt.imagePath),
+              ),
             ),
             // ウィジェット名
             SizedBox(
