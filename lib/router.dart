@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:playgroundflutterapp/model/english_word.dart';
+import 'package:playgroundflutterapp/model/wgt.dart';
 import 'package:playgroundflutterapp/screens/english_words_screens/english_words_detail_screen.dart';
 import 'package:playgroundflutterapp/screens/english_words_screens/english_words_screen.dart';
+import 'package:playgroundflutterapp/screens/widget_detail_screen.dart';
 
 import 'main.dart';
 
@@ -16,6 +18,17 @@ final goRouter = GoRouter(
         return MaterialPage(
           key: state.pageKey,
           child: const MyHomePage(),
+        );
+      },
+    ),
+    // ウィジェット詳細ページ
+    GoRoute(
+      path: '/widget-detail',
+      name: 'widgetDetail',
+      pageBuilder: (context, state) {
+        return MaterialPage(
+          key: state.pageKey,
+          child: WidgetDetailScreen(wgt: state.extra as Wgt),
         );
       },
     ),
