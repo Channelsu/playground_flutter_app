@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:playgroundflutterapp/components/widget_card.dart';
 
 class BasicWidgetsScreen extends StatelessWidget {
   const BasicWidgetsScreen({super.key});
@@ -6,390 +7,62 @@ class BasicWidgetsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final widgetCards = [
-      Card(
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(0),
-        ),
-        child: Column(
-          children: [
-            // ウィジェット画像
-            SizedBox(
-              width: double.infinity,
-              height: 128,
-              child: Image.asset('assets/widget_images/app_bar.png'),
-            ),
-            // ウィジェット名
-            SizedBox(
-              width: double.infinity,
-              child: Text(
-                'AppBar',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-            ),
-            // ウィジェット説明文
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.only(left: 4),
-              child: Text(
-                '説明文説明文説明文説明文説明文',
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
-            ),
-          ],
-        ),
+      WidgetCard(
+        widgetName: 'AppBar',
+        imageName: 'app_bar',
+        overview:
+            'TabBarウィジェットやFlexibleSpaceBarウィジェットのような他のウィジェットを収容することもできるツールバーになります。',
       ),
-      Card(
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(0),
-        ),
-        child: Column(
-          children: [
-            // ウィジェット画像
-            SizedBox(
-              width: double.infinity,
-              height: 128,
-              child: Image.asset('assets/widget_images/column.png'),
-            ),
-            // ウィジェット名
-            SizedBox(
-              width: double.infinity,
-              child: Text(
-                'Column',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-            ),
-            // ウィジェット説明文
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.only(left: 4),
-              child: Text(
-                '説明文説明文説明文説明文説明文',
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
-            ),
-          ],
-        ),
+      WidgetCard(
+        widgetName: 'Column',
+        imageName: 'column',
+        overview: '子ウィジェットのリストを垂直方向に配置するウィジェットです。',
       ),
-      Card(
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(0),
-        ),
-        child: Column(
-          children: [
-            // ウィジェット画像
-            SizedBox(
-              width: double.infinity,
-              height: 128,
-              child: Image.asset('assets/widget_images/container.png'),
-            ),
-            // ウィジェット名
-            SizedBox(
-              width: double.infinity,
-              child: Text(
-                'Container',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-            ),
-            // ウィジェット説明文
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.only(left: 4),
-              child: Text(
-                '説明文説明文説明文説明文説明文',
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
-            ),
-          ],
-        ),
+      WidgetCard(
+        widgetName: 'Container',
+        imageName: 'container',
+        overview: 'カラーリングや配置、サイズ調整のウィジェットを兼ね備えた便利なウィジェットになります。',
       ),
-      Card(
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(0),
-        ),
-        child: Column(
-          children: [
-            // ウィジェット画像
-            SizedBox(
-              width: double.infinity,
-              height: 128,
-              child: Image.asset('assets/widget_images/elevated_button.png'),
-            ),
-            // ウィジェット名
-            SizedBox(
-              width: double.infinity,
-              child: Text(
-                'ElevatedButton',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-            ),
-            // ウィジェット説明文
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.only(left: 4),
-              child: Text(
-                '説明文説明文説明文説明文説明文',
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
-            ),
-          ],
-        ),
+      WidgetCard(
+        widgetName: 'ElevatedButton',
+        imageName: 'elevated_button',
+        overview: 'マテリアルデザインの昇降ボタン。押されると上昇する塗りつぶされたボタンです。',
       ),
-      Card(
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(0),
-        ),
-        child: Column(
-          children: [
-            // ウィジェット画像
-            SizedBox(
-              width: double.infinity,
-              height: 128,
-              child: Image.asset('assets/widget_images/flutter_logo.png'),
-            ),
-            // ウィジェット名
-            SizedBox(
-              width: double.infinity,
-              child: Text(
-                'FlutterLogo',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-            ),
-            // ウィジェット説明文
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.only(left: 4),
-              child: Text(
-                '説明文説明文説明文説明文説明文',
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
-            ),
-          ],
-        ),
+      WidgetCard(
+        widgetName: 'FlutterLogo',
+        imageName: 'flutter_logo',
+        overview: 'ウィジェット形式のFlutterのロゴになります。このウィジェットはIconThemeを順守しています。',
       ),
-      Card(
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(0),
-        ),
-        child: Column(
-          children: [
-            // ウィジェット画像
-            SizedBox(
-              width: double.infinity,
-              height: 128,
-              child: Image.asset('assets/widget_images/icon.png'),
-            ),
-            // ウィジェット名
-            SizedBox(
-              width: double.infinity,
-              child: Text(
-                'Icon',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-            ),
-            // ウィジェット説明文
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.only(left: 4),
-              child: Text(
-                '説明文説明文説明文説明文説明文',
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
-            ),
-          ],
-        ),
+      WidgetCard(
+        widgetName: 'Icon',
+        imageName: 'icon',
+        overview: 'マテリアルデザインのアイコンを表示するウィジェットです。',
       ),
-      Card(
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(0),
-        ),
-        child: Column(
-          children: [
-            // ウィジェット画像
-            SizedBox(
-              width: double.infinity,
-              height: 128,
-              child: Image.asset('assets/widget_images/image.png'),
-            ),
-            // ウィジェット名
-            SizedBox(
-              width: double.infinity,
-              child: Text(
-                'Image',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-            ),
-            // ウィジェット説明文
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.only(left: 4),
-              child: Text(
-                '説明文説明文説明文説明文説明文',
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
-            ),
-          ],
-        ),
+      WidgetCard(
+        widgetName: 'Image',
+        imageName: 'image',
+        overview: '画像を表示するウィジェットです。',
       ),
-      Card(
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(0),
-        ),
-        child: Column(
-          children: [
-            // ウィジェット画像
-            SizedBox(
-              width: double.infinity,
-              height: 128,
-              child: Image.asset('assets/widget_images/flutter_logo.png'),
-            ),
-            // ウィジェット名
-            SizedBox(
-              width: double.infinity,
-              child: Text(
-                'Placeholder',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-            ),
-            // ウィジェット説明文
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.only(left: 4),
-              child: Text(
-                '説明文説明文説明文説明文説明文',
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
-            ),
-          ],
-        ),
+      WidgetCard(
+        widgetName: 'Placeholder',
+        imageName: 'flutter_logo',
+        overview: '今後ウィジェットが追加される場所を表すためのボックスを描くウィジェットです。',
       ),
-      Card(
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(0),
-        ),
-        child: Column(
-          children: [
-            // ウィジェット画像
-            SizedBox(
-              width: double.infinity,
-              height: 128,
-              child: Image.asset('assets/widget_images/row.png'),
-            ),
-            // ウィジェット名
-            SizedBox(
-              width: double.infinity,
-              child: Text(
-                'Row',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-            ),
-            // ウィジェット説明文
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.only(left: 4),
-              child: Text(
-                '説明文説明文説明文説明文説明文',
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
-            ),
-          ],
-        ),
+      WidgetCard(
+        widgetName: 'Rpw',
+        imageName: 'row',
+        overview: '子ウィジェットのリストを水平方向に配置するウィジェットです。',
       ),
-      Card(
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(0),
-        ),
-        child: Column(
-          children: [
-            // ウィジェット画像
-            SizedBox(
-              width: double.infinity,
-              height: 128,
-              child: Image.asset('assets/widget_images/scaffold.png'),
-            ),
-            // ウィジェット名
-            SizedBox(
-              width: double.infinity,
-              child: Text(
-                'Scaffold',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-            ),
-            // ウィジェット説明文
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.only(left: 4),
-              child: Text(
-                '説明文説明文説明文説明文説明文',
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
-            ),
-          ],
-        ),
+      WidgetCard(
+        widgetName: 'Scaffold',
+        imageName: 'scaffold',
+        overview:
+            'マテリアルデザインの基本的なビジュアルレイアウト構造を実装します。このクラスは、ドロワー、スナックバー、ボトムシートを表示するためのAPIを提供します。',
       ),
-      Card(
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(0),
-        ),
-        child: Column(
-          children: [
-            // ウィジェット画像
-            SizedBox(
-              width: double.infinity,
-              height: 128,
-              child: Image.asset('assets/widget_images/text.png'),
-            ),
-            // ウィジェット名
-            SizedBox(
-              width: double.infinity,
-              child: Text(
-                'Text',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-            ),
-            // ウィジェット説明文
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.only(left: 4),
-              child: Text(
-                '説明文説明文説明文説明文説明文',
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
-            ),
-          ],
-        ),
+      WidgetCard(
+        widgetName: 'Text',
+        imageName: 'text',
+        overview: '一行での文章を表示するウィジェットです。',
       ),
     ];
     return Scaffold(
