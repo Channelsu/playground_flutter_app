@@ -16,12 +16,7 @@ class BasicWidgetsScreen extends StatelessWidget {
         mainAxisSpacing: 8,
         crossAxisSpacing: 8,
         children: [
-          for (final wgt in widgetList)
-            WidgetCard(
-              widgetName: wgt.name,
-              imagePath: wgt.imagePath,
-              overview: wgt.overview,
-            )
+          for (final wgt in widgetList) WidgetCard(wgt: wgt),
         ],
       ),
     );
