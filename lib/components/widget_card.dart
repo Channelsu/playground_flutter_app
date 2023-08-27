@@ -44,11 +44,14 @@ class WidgetCard extends StatelessWidget {
             Container(
               width: double.infinity,
               padding: const EdgeInsets.only(left: 4),
-              child: Text(
-                wgt.overview,
-                maxLines: 3,
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.bodySmall,
+              child: Hero(
+                tag: wgt.overview,
+                child: Text(
+                  wgt.overview,
+                  maxLines: 3,
+                  overflow: TextOverflow.ellipsis,
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
               ),
             ),
           ],

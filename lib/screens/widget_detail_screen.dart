@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:playgroundflutterapp/components/expandable_text.dart';
 import 'package:playgroundflutterapp/model/wgt.dart';
 
 class WidgetDetailScreen extends StatelessWidget {
@@ -21,24 +22,42 @@ class WidgetDetailScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
+      body: ListView(
         children: [
-          Hero(
-            tag: wgt.id,
-            child: Container(
-              padding: const EdgeInsets.symmetric(vertical: 20),
-              width: double.infinity,
-              height: 280,
-              child: Image.asset(wgt.imagePath),
-            ),
-          ),
-          Hero(
-            tag: wgt.name,
-            child: Text(
-              wgt.name,
-              style: Theme.of(context).textTheme.headlineMedium!.merge(
-                    const TextStyle(fontWeight: FontWeight.bold),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: [
+                Hero(
+                  tag: wgt.id,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    width: double.infinity,
+                    height: 280,
+                    child: Image.asset(wgt.imagePath),
                   ),
+                ),
+                Hero(
+                  tag: wgt.name,
+                  child: Text(
+                    wgt.name,
+                    style: Theme.of(context).textTheme.headlineMedium!.merge(
+                          const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                  ),
+                ),
+                Hero(
+                  tag: wgt.overview,
+                  child: Text(
+                    wgt.overview,
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                ExpandableText(wgt.detail)
+              ],
             ),
           ),
         ],
