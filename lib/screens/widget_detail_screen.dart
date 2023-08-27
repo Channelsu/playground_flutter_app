@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:playgroundflutterapp/components/expandable_text.dart';
 import 'package:playgroundflutterapp/model/wgt.dart';
 
 class WidgetDetailScreen extends StatelessWidget {
@@ -55,10 +56,7 @@ class WidgetDetailScreen extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                Text(
-                  wgt.detail,
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
+                ExpandableText(wgt.detail)
               ],
             ),
           ),
