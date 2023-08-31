@@ -30,7 +30,72 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
             OutlinedButton(
               onPressed: countTwice,
               child: const Text('2倍！！'),
-            )
+            ),
+            Card(
+              elevation: 4,
+              margin: const EdgeInsets.all(16),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+              clipBehavior: Clip.antiAliasWithSaveLayer, // 画像を丸角にする
+              child: Column(
+                children: [
+                  Stack(
+                    children: [
+                      SizedBox(
+                        width: double.infinity,
+                        height: 200,
+                        child: Image.network(
+                          'https://source.unsplash.com/300x200/?resort',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      // ハートアイコン
+                      Positioned(
+                        top: 16,
+                        right: 16,
+                        child: IconButton(
+                          icon: const Icon(
+                            Icons.favorite_outline,
+                            color: Colors.white,
+                          ),
+                          iconSize: 28,
+                          padding: EdgeInsets.zero,
+                          constraints:
+                              const BoxConstraints(), // アイコンボタンの余白を0にするため記述
+                          onPressed: () {},
+                        ),
+                      ),
+                    ],
+                  ),
+                  // タイトル
+                  Container(
+                    width: double.infinity,
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                    child: const Text(
+                      'タイトル',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 22,
+                      ),
+                    ),
+                  ),
+                  // サブタイトル
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    child: const Text(
+                      'ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。',
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
