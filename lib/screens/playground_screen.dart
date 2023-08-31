@@ -31,6 +31,7 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
               onPressed: countTwice,
               child: const Text('2倍！！'),
             ),
+            // 横長カードサンプル1
             Card(
               elevation: 4,
               margin: const EdgeInsets.all(16),
