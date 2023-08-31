@@ -81,7 +81,7 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                       ),
                     ),
                   ),
-                  // サブタイトル
+                  // 説明文
                   Container(
                     width: double.infinity,
                     padding: const EdgeInsets.symmetric(horizontal: 8),
