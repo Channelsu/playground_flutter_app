@@ -97,6 +97,84 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                 ],
               ),
             ),
+            // 横長カードサンプル3
+            const SizedBox(height: 100),
+            SizedBox(
+              height: 230,
+              child: Stack(
+                children: [
+                  Positioned(
+                    top: 35,
+                    left: 20,
+                    // elevationを付けるためMaterialウィジェットを使用
+                    child: Material(
+                      elevation: 4,
+                      child: Container(
+                        height: 180,
+                        width: MediaQuery.of(context).size.width * 0.9,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(0.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  // 画像部分
+                  Positioned(
+                    top: 0,
+                    left: 30,
+                    child: Card(
+                      elevation: 4,
+                      shadowColor: Colors.grey.withOpacity(0.5),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Container(
+                        height: 200,
+                        width: 150,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: const DecorationImage(
+                              image: NetworkImage(
+                                'https://source.unsplash.com/300x200/?beach',
+                              ),
+                              fit: BoxFit.fill,
+                            )),
+                      ),
+                    ),
+                  ),
+                  const Positioned(
+                    top: 45,
+                    left: 200,
+                    child: SizedBox(
+                      height: 150,
+                      width: 180,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // タイトル
+                          Text(
+                            'タイトル',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 22,
+                            ),
+                          ),
+                          Divider(color: Colors.black),
+                          // 説明文
+                          Text(
+                            'ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
