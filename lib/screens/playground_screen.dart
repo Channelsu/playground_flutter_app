@@ -118,6 +118,7 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                       ),
                     ),
                   ),
+                  // 画像部分
                   Positioned(
                     top: 0,
                     left: 30,
@@ -138,6 +139,36 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                               ),
                               fit: BoxFit.fill,
                             )),
+                      ),
+                    ),
+                  ),
+                  const Positioned(
+                    top: 45,
+                    left: 200,
+                    child: SizedBox(
+                      height: 150,
+                      width: 180,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // タイトル
+                          Text(
+                            'タイトル',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 22,
+                            ),
+                          ),
+                          Divider(color: Colors.black),
+                          // 説明文
+                          Text(
+                            'ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
