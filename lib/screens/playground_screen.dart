@@ -97,6 +97,53 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                 ],
               ),
             ),
+            // 横長カードサンプル3
+            const SizedBox(height: 100),
+            SizedBox(
+              height: 230,
+              child: Stack(
+                children: [
+                  Positioned(
+                    top: 35,
+                    left: 20,
+                    // elevationを付けるためMaterialウィジェットを使用
+                    child: Material(
+                      elevation: 4,
+                      child: Container(
+                        height: 180,
+                        width: MediaQuery.of(context).size.width * 0.9,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(0.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    top: 0,
+                    left: 30,
+                    child: Card(
+                      elevation: 4,
+                      shadowColor: Colors.grey.withOpacity(0.5),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Container(
+                        height: 200,
+                        width: 150,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: const DecorationImage(
+                              image: NetworkImage(
+                                'https://source.unsplash.com/300x200/?beach',
+                              ),
+                              fit: BoxFit.fill,
+                            )),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
