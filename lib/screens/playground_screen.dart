@@ -232,6 +232,76 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                   ],
                 ),
               ),
+              // 横長カードサンプル4
+              Card(
+                margin: const EdgeInsets.symmetric(horizontal: 20),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Image.network(
+                      'https://source.unsplash.com/300x200/?resort',
+                      height: 160,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(15, 15, 15, 0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            'タイトル',
+                            style: TextStyle(
+                              fontSize: 24,
+                              color: Colors.grey[800],
+                            ),
+                          ),
+                          const SizedBox(height: 10),
+                          Text(
+                            'ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.grey[700],
+                            ),
+                          ),
+                          Row(
+                            children: <Widget>[
+                              const Spacer(),
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  foregroundColor: Colors.transparent,
+                                ),
+                                child: const Text(
+                                  'シェア',
+                                  style: TextStyle(color: Colors.pinkAccent),
+                                ),
+                                onPressed: () {},
+                              ),
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  foregroundColor: Colors.transparent,
+                                ),
+                                child: const Text(
+                                  'もっと見る',
+                                  style: TextStyle(color: Colors.pinkAccent),
+                                ),
+                                onPressed: () {},
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 12),
+              // 横長カードサンプル5
             ],
           ),
         ),
