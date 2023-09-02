@@ -120,7 +120,7 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                         ),
                       ),
                     ),
-                    // 影
+                    // オーバーレイ
                     Positioned(
                       bottom: 0,
                       left: 0,
