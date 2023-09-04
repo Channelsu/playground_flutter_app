@@ -63,6 +63,25 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                 ),
               ),
               const SizedBox(height: 32),
+              // 入力欄サンプル3
+              SizedBox(
+                // 入力欄横幅
+                width: MediaQuery.of(context).size.width * 0.7,
+                child: TextField(
+                  // テキストを見えないようにする
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    // 枠線なし
+                    border: InputBorder.none,
+                    fillColor: Colors.blue[100],
+                    filled: true,
+                    prefixIcon: const Icon(Icons.lock, color: Colors.blue),
+                    suffixIcon: const Icon(Icons.visibility_off),
+                    labelText: 'パスワード',
+                  ),
+                ),
+              ),
+              const SizedBox(height: 32),
               // 横長カードサンプル1
               Card(
                 elevation: 4,
