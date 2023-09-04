@@ -48,6 +48,21 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                 ),
               ),
               const SizedBox(height: 32),
+              // 入力欄サンプル2
+              SizedBox(
+                // 入力欄横幅
+                width: MediaQuery.of(context).size.width * 0.7,
+                child: const TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                    ),
+                    icon: Icon(Icons.person),
+                    labelText: '名前',
+                  ),
+                ),
+              ),
+              const SizedBox(height: 32),
               // 横長カードサンプル1
               Card(
                 elevation: 4,
