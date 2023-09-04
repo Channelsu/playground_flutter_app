@@ -32,6 +32,22 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                 onPressed: countTwice,
                 child: const Text('2倍！！'),
               ),
+              const SizedBox(height: 32),
+              // 入力欄サンプル1
+              SizedBox(
+                // 入力欄横幅
+                width: MediaQuery.of(context).size.width * 0.7,
+                // 入力欄高さ
+                height: 48,
+                child: const TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 32),
               // 横長カードサンプル1
               Card(
                 elevation: 4,
