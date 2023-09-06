@@ -383,7 +383,75 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                 ),
               ),
               const SizedBox(height: 12),
-              // 横長カードサンプル5
+              // 縦長カードサンプル1
+              ConstrainedBox(
+                constraints: BoxConstraints(
+                  maxWidth:
+                      MediaQuery.of(context).size.width * 0.4, // カードの横幅（最大値）
+                ),
+                child: Card(
+                  elevation: 4,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(0),
+                  ),
+                  child: Column(
+                    children: [
+                      // 画像
+                      SizedBox(
+                        width: double.infinity,
+                        height: 128,
+                        child: Image.network(
+                          'https://source.unsplash.com/300x200/?bag',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      // タイトル
+                      Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.only(left: 4),
+                        child: Text(
+                          'タイトル',
+                          overflow: TextOverflow.ellipsis,
+                          style: Theme.of(context).textTheme.bodySmall,
+                        ),
+                      ),
+                      // 値段
+                      Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.only(left: 4),
+                        child: const Text(
+                          '1000円',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      // アイコンといいね数
+                      const Visibility(
+                        visible: true, // いいねが無い場合はfalseを設定する
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 4),
+                              child: Icon(
+                                Icons.favorite,
+                                color: Colors.black45,
+                                size: 16,
+                              ),
+                            ),
+                            Text(
+                              '3',
+                              style: TextStyle(color: Colors.black45),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 12),
             ],
           ),
         ),
