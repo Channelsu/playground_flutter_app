@@ -82,6 +82,38 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                 ),
               ),
               const SizedBox(height: 32),
+              // 入力欄サンプル4
+              SizedBox(
+                // 入力欄横幅
+                width: MediaQuery.of(context).size.width * 0.7,
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30.0),
+                    ),
+                    prefixIcon: IconButton(
+                      icon: const Icon(Icons.emoji_emotions),
+                      onPressed: () {},
+                    ),
+                    suffixIcon: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        IconButton(
+                          icon: const Icon(Icons.attach_file),
+                          onPressed: () {},
+                        ),
+                        IconButton(
+                          icon: const Icon(Icons.camera_alt),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                    labelText: 'メッセージ',
+                  ),
+                ),
+              ),
+              const SizedBox(height: 32),
               // 横長カードサンプル1
               Card(
                 elevation: 4,
