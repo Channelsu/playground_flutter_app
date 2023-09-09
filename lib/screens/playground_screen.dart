@@ -114,6 +114,42 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                 ),
               ),
               const SizedBox(height: 32),
+              // 入力欄サンプル5（neumorphism）
+              SizedBox(
+                // 入力欄横幅
+                width: MediaQuery.of(context).size.width * 0.7,
+                // 入力欄高さ
+                height: 48,
+                child: Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30.0),
+                    boxShadow: [
+                      const BoxShadow(color: Colors.grey),
+                      BoxShadow(
+                        color: Colors.grey.shade100, // 影の色
+                        offset: const Offset(-5, -5), // 影の位置
+                        blurRadius: 10, // 影のぼかし半径
+                        spreadRadius: -1, // 影の拡散半径
+                      ),
+                      const BoxShadow(
+                        color: Colors.white, // 影の色
+                        offset: Offset(5, 5), // 影の位置
+                        blurRadius: 10, // 影のぼかし半径
+                        spreadRadius: -1, // 影の拡散半径
+                      ),
+                    ],
+                  ),
+                  child: const TextField(
+                    cursorColor: Colors.grey, // カーソルの色
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      prefixIcon: Icon(Icons.search, color: Colors.grey),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 32),
               // 横長カードサンプル1
               Card(
                 elevation: 4,
@@ -452,8 +488,49 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                 ),
               ),
               const SizedBox(height: 12),
+              const NeumorphicInput(
+                hintText: 'Enter text...',
+              ),
+              const SizedBox(height: 12),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class NeumorphicInput extends StatelessWidget {
+  final String hintText;
+
+  const NeumorphicInput({super.key, required this.hintText});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      decoration: BoxDecoration(
+        color: Colors.grey[200], // 入力欄の背景色
+        borderRadius: BorderRadius.circular(12), // 角丸
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.shade100, // 影の色
+            offset: const Offset(5, 5), // 影の位置
+            blurRadius: 10, // 影のぼかし半径
+            spreadRadius: 1, // 影の拡散半径
+          ),
+          const BoxShadow(
+            color: Colors.white, // 影の色
+            offset: Offset(-5, -5), // 影の位置
+            blurRadius: 10, // 影のぼかし半径
+            spreadRadius: 1, // 影の拡散半径
+          ),
+        ],
+      ),
+      child: TextField(
+        decoration: InputDecoration(
+          hintText: hintText,
+          border: InputBorder.none,
         ),
       ),
     );
