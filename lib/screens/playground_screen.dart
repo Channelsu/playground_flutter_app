@@ -488,49 +488,8 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                 ),
               ),
               const SizedBox(height: 12),
-              const NeumorphicInput(
-                hintText: 'Enter text...',
-              ),
-              const SizedBox(height: 12),
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class NeumorphicInput extends StatelessWidget {
-  final String hintText;
-
-  const NeumorphicInput({super.key, required this.hintText});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      decoration: BoxDecoration(
-        color: Colors.grey[200], // 入力欄の背景色
-        borderRadius: BorderRadius.circular(12), // 角丸
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.shade100, // 影の色
-            offset: const Offset(5, 5), // 影の位置
-            blurRadius: 10, // 影のぼかし半径
-            spreadRadius: 1, // 影の拡散半径
-          ),
-          const BoxShadow(
-            color: Colors.white, // 影の色
-            offset: Offset(-5, -5), // 影の位置
-            blurRadius: 10, // 影のぼかし半径
-            spreadRadius: 1, // 影の拡散半径
-          ),
-        ],
-      ),
-      child: TextField(
-        decoration: InputDecoration(
-          hintText: hintText,
-          border: InputBorder.none,
         ),
       ),
     );
