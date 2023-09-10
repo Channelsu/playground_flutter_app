@@ -12,7 +12,7 @@ class BasicWidgetsScreen extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         shrinkWrap: true,
         crossAxisCount: 2,
-        childAspectRatio: 2 / 2.25, // Todo:ここでCardの高さ調整
+        childAspectRatio: 2 / 2.4, // Todo:ここでCardの高さ調整
         mainAxisSpacing: 8,
         crossAxisSpacing: 8,
         children: [
