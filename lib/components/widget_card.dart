@@ -28,6 +28,7 @@ class WidgetCard extends StatelessWidget {
                 child: Image.asset(wgt.imagePath),
               ),
             ),
+            const SizedBox(height: 8),
             // ウィジェット名
             SizedBox(
               width: double.infinity,
@@ -40,6 +41,7 @@ class WidgetCard extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(height: 8),
             // ウィジェット概要
             Container(
               width: double.infinity,
