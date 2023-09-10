@@ -258,11 +258,15 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                                 fontSize: 22,
                               ),
                             ),
-                            Text(
-                              'ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
+                            Expanded(
+                              child: Text(
+                                'ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                ),
                               ),
                             ),
                           ],
