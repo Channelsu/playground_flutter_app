@@ -321,13 +321,13 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
                         ),
                       ),
                     ),
-                    const Positioned(
+                    Positioned(
                       top: 45,
                       left: 200,
                       child: SizedBox(
                         height: 150,
-                        width: 180,
-                        child: Column(
+                        width: MediaQuery.of(context).size.width * 0.4,
+                        child: const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             // タイトル
